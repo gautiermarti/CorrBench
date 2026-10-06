@@ -1,0 +1,26 @@
+config_name: finance_taiwan_n80
+dataset_version: paper-v1-staging-20261005
+domain: finance
+protocol_id: taiwan_final-paper-reproduction-v1
+source_reference: Official TWSE MI_INDEX and TPEx afterTrading/dailyQuotes reports,
+  preserved in a curated Taiwan panel; see docs/financial_release_review.md.
+observation_definition: Returns relative to exchange reference prices with a raw-close
+  fallback and a 35% unresolved-return screen; the historical daily_total_return
+  field name is preserved. Not an independently reconciled cash-dividend total return.
+  Each matrix uses 252 source trading sessions.
+builder_reference: corrflow-research return reconstruction audit dated 2026-10-05;
+  exact builder and audit SHA-256 values accompany this metadata.
+split_description: Training 2014-2020; validation 2021-2022; paper test 2023-2026-07-30.
+  These are frozen reproduction splits with overlapping windows and previously inspected
+  test periods, not a fresh competition holdout.
+matrix_space: real_correlation_pd
+rights_status: pending
+rights_evidence: Official government listings 11549 and 11370 identify Open Government
+  Data License 1.0. Exact website-feed field/date correspondence is recorded in
+  docs/taiwan_source_scope_20261006.md; coverage of the historical MI_INDEX and
+  dailyQuotes records and required attribution remain unconfirmed. Portal publication
+  dates are not assumed to be legal coverage cutoffs. No blanket exchange-data license is claimed.
+builder_files_sha256:
+  scripts/build_market_dataset.py: 41ce83c0209dd4deadf91fab9271dddc0fc439db2d55556fe6c6c2171281842c
+  src/corrflow/datasets.py: 2870aaa1928c815551572afb7905938a612bf906d76044866a0826ebc633ffab
+  docs/raw_returns_reproduction_audit.json: 4863e64b6f352f93d82f4a1818f449e8155797e43d8f843082138ccea8c4de70

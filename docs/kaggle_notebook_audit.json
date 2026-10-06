@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "scope": "Local isolated Jupyter execution, not the hosted Kaggle sandbox",
+  "starter_reads_public_files_only": true,
+  "starter_and_metric_schema_valid": true,
+  "csv_scores_match_standalone_audit": true,
+  "kernel": {
+    "scores": {
+      "Public": 0.06284606273496816,
+      "Private": 0.04032722335810333
+    },
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6"
+  },
+  "notebook_sha256": {
+    "starter.ipynb": "f926ea76c3cc8b9a7ad6fea913b30ada045e3f82cbb3cb1e07ef4ef49a4e25c8",
+    "metric.ipynb": "3e35c3ea989cce519fecdcd422d2666138802a38f6983d7e9bf91218604cff50"
+  },
+  "checker_sha256": "446d1a09b75e64af38456219fb7dfb22e85a68816955a990f4470cf4432f7854"
+}

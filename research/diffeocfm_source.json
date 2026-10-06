@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/antoinecollas/DiffeoCFM",
+  "revision": "902282acd13a67784e2096d09ee93477b268c079",
+  "files": {
+    "diffeo.py": "43e21370085aa9630c3cf3f5e59164416430807f902b13ddf8569f387cd4da76",
+    "gaussian.py": "8c84061e26abeec64d57e29a454d7e41bf5c34c0dce2f8aea4a1e7318580c5c2",
+    "model.py": "1024f03c860e52d231863d3f1c6cce822cbc5012e482c2e241c248756c2b3ebe",
+    "fm.py": "3e73bb7645c413399a851014efefe7375af39df2d2cdfdc21a3c74f886967dce",
+    "data.py": "aaf178553942d390acc38651d3ef5cff5a879cb8dea1204d9d8f3c747c876281",
+    "LICENCE": "9cdcd6ab0442036aa61fb37d969bc327146080f96e2e2ddc22aecdf39375dfd8"
+  },
+  "scope": "MIT correlation path only; excludes spd.py and spd_fm.py"
+}

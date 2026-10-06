@@ -1,0 +1,51 @@
+{
+  "scope": "Metadata correction only; all Parquet bytes remain identical to the full original array round-trip audit",
+  "full_roundtrip_audit_sha256": "383dd1cd401c78942b0a1140b8c46b8287cf2ce2e3f55e066eb6507bc12b8fce",
+  "configurations": {
+    "finance_taiwan_n80": {
+      "manifest_sha256": "6fee48354770b406a05825f40723400644ee05b93613f6c9ece1757be4f4425c",
+      "card_sha256": "57dd21212f3524302bd527014dff10a15eba1a24f64251f84fc590d01f64fce9",
+      "distribution_blocked": true,
+      "splits": {
+        "train": {
+          "parquet_sha256": "6ca6d1b3ec32c65c02a1d8bcc18e259ad086177e134630a315f84bd37908ae02",
+          "unchanged_from_full_array_audit": true,
+          "rows": 13600
+        },
+        "validation": {
+          "parquet_sha256": "1a0b9bb00e2bc4fc77d97b9ba3099494379e6ddc86b4397a901ca83c632ec52f",
+          "unchanged_from_full_array_audit": true,
+          "rows": 3920
+        },
+        "test": {
+          "parquet_sha256": "53c21c2d5d0e47b38906b5d8c4a1fad4867b3e3e60686ae06872c4dfbed15917",
+          "unchanged_from_full_array_audit": true,
+          "rows": 6888
+        }
+      }
+    },
+    "finance_japan_n80": {
+      "manifest_sha256": "b4c43b2df125c67ea0c9f54d4187c29db7ceea586ee0c5af42da380dd3136ba9",
+      "card_sha256": "4b8644cce0098ac3a57ed5dd8c3bc344456417192d8ce63743c36bd8f00ab277",
+      "distribution_blocked": true,
+      "splits": {
+        "train": {
+          "parquet_sha256": "580664121d9ae3267fb708b109fe9e323b0a9e24d798f37402f0cc1e011f99ae",
+          "unchanged_from_full_array_audit": true,
+          "rows": 3848
+        },
+        "validation": {
+          "parquet_sha256": "a895c5bcf53bb6ccfcf98f158e61fc0704e981b8f2c77f16b91542e8f6bc498d",
+          "unchanged_from_full_array_audit": true,
+          "rows": 1936
+        },
+        "test": {
+          "parquet_sha256": "0f5016ed7ecdecf779ebc16c94fc36d12032b46f79d3f7b4e81856e3d87e661d",
+          "unchanged_from_full_array_audit": true,
+          "rows": 2888
+        }
+      }
+    }
+  },
+  "total_rows": 33080
+}

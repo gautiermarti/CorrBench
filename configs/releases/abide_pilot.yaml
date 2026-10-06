@@ -1,0 +1,13 @@
+config_name: brain_abide_ho_n111
+dataset_version: pilot-20261005
+domain: neuroscience
+protocol_id: abide_pcp_ho_site_holdout_v1_20261005
+source_reference: https://github.com/preprocessed-connectomes-project/abide
+observation_definition: CPAC filt_noglobal Harvard-Oxford regional BOLD series; one complete scan per subject; per-scan standardized-series OAS correlation.
+builder_reference: corrbench.cli.build_abide_dataset; docs/fmri_pilot_protocol.md
+split_description: Other sites train; UM_1 and UM_2 validation; NYU test. Quality and constant-ROI exclusions precede modeling.
+matrix_space: real_correlation_pd
+rights_status: pending
+rights_evidence: ABIDE I explicitly links CC BY-NC-SA 3.0, whose section 3 permits adaptations subject to section 4. All source-site, investigator and funder attribution is now complete in docs/abide_attribution_20261006.md. The remaining issue is the reach of the separate Harvard-Oxford CC BY-SA 4.0 terms to numerical derivatives and the historical PCP mask. The candidate excludes atlas images and label-name tables. See docs/abide_release_review.md. Redistribution stays pending for that specific scope question.
+independent_units: 601 subjects across disjoint sites; 349 train, 92 validation, 160 test. Windows are not used as independent samples. One held-out site does not establish generalization across all sites.
+limitations: Preprocessed observations rather than raw scanner images. Post-pilot source audit finds 110 named atlas regions plus unnamed label 3455 occupying two voxels; that label alone caused 161 of 179 constant-series exclusions. Frozen 601-subject results remain unchanged. OAS, scan length, rank, site and QC exclusions affect the target/population. No clinical diagnostic, causal, patient-simulation or privacy claim. See Di Martino et al., Molecular Psychiatry 19, 659–667 (2014), doi:10.1038/mp.2013.78, and Craddock et al., Neuroinformatics (2013), The Neuro Bureau Preprocessing Initiative.

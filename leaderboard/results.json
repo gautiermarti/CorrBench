@@ -1,0 +1,1225 @@
+{
+  "schema_version": "corrbench.leaderboard.v1",
+  "public_release": false,
+  "updated": "2026-10-06",
+  "protocols": [
+    {
+      "id": "taiwan_categorical_20261005",
+      "domain": "Finance",
+      "title": "Taiwan \u00b7 matched categorical generation",
+      "description": "80 assets, identical 1,500 test cases, five seeds.",
+      "status": "Complete included suites audited",
+      "finding": "Read fidelity, coverage and portfolio diagnostics together.",
+      "limitations": "Previously inspected periods; method-specific training budgets. Concurrent timing does not establish a speed ranking.",
+      "metric": "feature_swd",
+      "direction": "lower",
+      "metric_label": "Structural SWD \u2193",
+      "columns": [
+        [
+          "feature_swd",
+          "Structural SWD \u2193"
+        ],
+        [
+          "feature_sd",
+          "Seed SD"
+        ],
+        [
+          "recall",
+          "Coverage recall \u2191"
+        ],
+        [
+          "portfolio_swd",
+          "Portfolio SWD \u2193"
+        ],
+        [
+          "classifier_auc",
+          "C2ST AUC \u00b7 .5 ideal"
+        ]
+      ],
+      "protocol_file": "protocols/matched_taiwan_protocol.md",
+      "evidence_file": "evidence/matched_taiwan.json",
+      "dataset_hash": "5fe3cca2c289c8b1736e2f8cdc114b20d83bb9df51ae227ce58cc2edc86056ec",
+      "metric_version": "corrbench-21feature-float32-v1",
+      "split": "test",
+      "protocol_sha256": "4f925444971c5f7c32587c95a007ce9a4b3435c2ba985cf919fafc6970a61b6e"
+    },
+    {
+      "id": "abide_utility_20261005",
+      "domain": "Brain connectivity",
+      "title": "ABIDE \u00b7 augmentation at a held-out site",
+      "description": "111 source labels (110 named regions and one unnamed label). Train: 349 subjects; validation: 92 Michigan subjects; test: 160 NYU subjects. Generator selection and classifier tuning use validation only.",
+      "status": "Local pilot complete",
+      "finding": "No established augmentation gain over real-only training.",
+      "limitations": "One generator training seed; five generation seeds. Subject-bootstrap intervals condition on one site and fitted models. No clinical claim. Post-pilot atlas audit: unnamed two-voxel label 3455 alone caused 161 of 179 exclusions. Original pilot preserved.",
+      "metric": "auc",
+      "direction": "higher",
+      "metric_label": "Test ROC-AUC \u2191",
+      "columns": [
+        [
+          "auc",
+          "Test AUC \u2191"
+        ],
+        [
+          "generation_sd",
+          "Generation SD"
+        ],
+        [
+          "balanced_accuracy",
+          "Balanced accuracy \u2191"
+        ],
+        [
+          "structure_swd",
+          "Structure SWD \u2193"
+        ],
+        [
+          "roi_swd",
+          "Named-ROI SWD \u2193"
+        ]
+      ],
+      "protocol_file": "protocols/fmri_pilot_protocol.md",
+      "evidence_file": "evidence/fmri_pilot_results.json",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "metric_version": "abide-logistic-utility-v1",
+      "split": "test",
+      "protocol_sha256": "ad3c09ab8ca3290aca8875fba055e3a792de7f20b8744892013e0c2dff659b98"
+    },
+    {
+      "id": "abide_training_replication_20261005",
+      "domain": "Brain connectivity",
+      "title": "ABIDE \u00b7 five training replications",
+      "description": "Same 111 source labels and subject/site splits. Each of five learned-model fits averages five generation draws.",
+      "status": "Local exploratory replication complete",
+      "finding": "Inspect training variability and paired utility differences alongside average AUC.",
+      "limitations": "Average AUC over five draws within each training seed, then mean/sample SD across five training seeds. Paired subject and joint training/subject bootstraps are conditional on this site, exploratory and unadjusted for multiplicity. Five generation draws are not independent training fits. The initial NYU results were known before expanding training seeds. No new site holdout. Post-pilot atlas audit: unnamed two-voxel label 3455 alone caused 161 of 179 exclusions; frozen population preserved.",
+      "metric": "auc",
+      "direction": "higher",
+      "metric_label": "Test ROC-AUC \u2191",
+      "columns": [
+        [
+          "auc",
+          "Test AUC \u2191"
+        ],
+        [
+          "training_sd",
+          "Training SD"
+        ],
+        [
+          "auc_difference",
+          "\u0394 real-only AUC"
+        ],
+        [
+          "balanced_accuracy",
+          "Balanced accuracy \u2191"
+        ]
+      ],
+      "protocol_file": "protocols/fmri_replication_protocol.md",
+      "evidence_file": "evidence/fmri_replication_results.json",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "metric_version": "abide-logistic-utility-five-training-v1",
+      "split": "test",
+      "protocol_sha256": "90ca633e36b556dfc55bd7d10688fd3e75fd4e949214698cf7c7e125cb37e5bb"
+    },
+    {
+      "id": "weather_test_20261005",
+      "domain": "Weather",
+      "title": "Weather \u00b7 future years in three regions",
+      "description": "64 cells per patch. Train 1981\u20132010; validate 2011\u20132015; test 2016\u20132024.",
+      "status": "Baseline pilot complete",
+      "finding": "Historical replay is a strong reference for aggregate dependence.",
+      "limitations": "Nine year groups; regions and quarters are dependent. Unit local variance and reanalysis estimates; no forecast claim. Bootstrap ranges are descriptive and can be biased.",
+      "metric": "aggregate_w1",
+      "direction": "lower",
+      "metric_label": "Normalized aggregate W1 \u2193",
+      "columns": [
+        [
+          "aggregate_w1",
+          "Aggregate W1 \u2193"
+        ],
+        [
+          "year_groups",
+          "Year groups"
+        ],
+        [
+          "contexts",
+          "Region \u00d7 quarter"
+        ]
+      ],
+      "protocol_file": "protocols/weather_pilot_protocol.md",
+      "evidence_file": "evidence/weather_pilot_results.json",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "metric_version": "weather-aggregate-variance-w1-v1",
+      "split": "test",
+      "protocol_sha256": "5d17b86dab5baa7e9a3366d7c74e81b9b2b38c934a807cb84e40a00465272eed"
+    },
+    {
+      "id": "weather_spatial_transfer_20261005",
+      "domain": "Weather",
+      "title": "Weather \u00b7 calibrated South America transfer",
+      "description": "Unseen region, 2016\u20132024; local 1981\u20132010 climatology calibration.",
+      "status": "Baseline pilot complete",
+      "finding": "Geographical transfer is harder in this pilot.",
+      "limitations": "Nine year groups; regions and quarters are dependent. Unit local variance and reanalysis estimates; no forecast claim. Bootstrap ranges are descriptive and can be biased.",
+      "metric": "aggregate_w1",
+      "direction": "lower",
+      "metric_label": "Normalized aggregate W1 \u2193",
+      "columns": [
+        [
+          "aggregate_w1",
+          "Aggregate W1 \u2193"
+        ],
+        [
+          "year_groups",
+          "Year groups"
+        ],
+        [
+          "contexts",
+          "Region \u00d7 quarter"
+        ]
+      ],
+      "protocol_file": "protocols/weather_pilot_protocol.md",
+      "evidence_file": "evidence/weather_pilot_results.json",
+      "dataset_hash": "3f07df5e9b45b7c0c18f3e11fc2a1740e89fe78d9cdbd979d292f8dd431f4167",
+      "metric_version": "weather-aggregate-variance-w1-v1",
+      "split": "spatial_transfer",
+      "protocol_sha256": "5d17b86dab5baa7e9a3366d7c74e81b9b2b38c934a807cb84e40a00465272eed"
+    },
+    {
+      "id": "weather_generation_20261005",
+      "domain": "Weather / energy",
+      "title": "Temperature \u00b7 exploratory learned generation",
+      "description": "64 cells; three regions and four quarters. Train 1981\u20132010, validation 2011\u20132015, test 2016\u20132024.",
+      "status": "Local exploratory study complete",
+      "finding": "DiffeoCFM improves on its Gaussian prior but does not beat replay or the conditional mean on aggregate-variance W1.",
+      "limitations": "Exploratory inspected periods; one training seed. Generation SD is not uncertainty over future years. Structural SWD uses matched subsets of only nine matrices per condition; read utility separately.",
+      "metric": "aggregate_w1",
+      "direction": "lower",
+      "metric_label": "Aggregate-variance W1 \u2193",
+      "columns": [
+        [
+          "aggregate_w1",
+          "Aggregate W1 \u2193"
+        ],
+        [
+          "generation_sd",
+          "Generation SD"
+        ],
+        [
+          "structure_swd",
+          "Structure SWD \u2193"
+        ]
+      ],
+      "protocol_file": "protocols/weather_generation_protocol.md",
+      "evidence_file": "evidence/weather_generation_results.json",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "metric_version": "weather-variance-w1-generated200-v1",
+      "split": "test",
+      "protocol_sha256": "8fda4c302c25b7b73ae53126338c29b5e38b99718b1c34201318ecd009cd6c74"
+    },
+    {
+      "id": "legacy_unconditional_validation_20261005",
+      "domain": "Finance",
+      "title": "Legacy archive \u00b7 unconditional validation diagnostic",
+      "description": "80D precomputed matrix archive without dates or asset identities. One full 50-epoch reference reconstruction; 300 fixed validation cases, no conditioning.",
+      "status": "Local validation diagnostic complete",
+      "finding": "The full reference training budget completed but does not reproduce realistic archive distributions.",
+      "limitations": "Validation selected the model; these are diagnostic scores. Generation SD does not replicate training. No conditional or faithful original-training result is claimed.",
+      "metric": "feature_swd",
+      "direction": "lower",
+      "metric_label": "Validation structural SWD \u2193",
+      "columns": [
+        [
+          "feature_swd",
+          "Validation SWD \u2193"
+        ],
+        [
+          "generation_sd",
+          "Generation SD"
+        ],
+        [
+          "precision",
+          "Precision \u2191"
+        ],
+        [
+          "recall",
+          "Recall \u2191"
+        ],
+        [
+          "portfolio_swd",
+          "Portfolio SWD \u2193"
+        ]
+      ],
+      "protocol_file": "protocols/unconditional_validation_protocol.md",
+      "evidence_file": "evidence/unconditional_validation_results.json",
+      "dataset_hash": "2fd4405f2e6e61bfce3259e3aca211f5d5657321f1e35a6e0c1e46e586b027ad",
+      "metric_version": "legacy-unconditional-validation-300-v1",
+      "split": "validation",
+      "protocol_sha256": "bdbe011eb539f2384717a33fb98e68e5fc92cee98faa4d3ffc2c68ad32e21cd2"
+    },
+    {
+      "id": "abide_named110_same601_20261006",
+      "domain": "Brain connectivity",
+      "title": "ABIDE \u00b7 110 named regions \u00b7 same601",
+      "description": "Re-estimated OAS targets. 349 training, 92 Michigan validation and 160 NYU test subjects. Simple controls; no learned fits.",
+      "status": "Post-pilot sensitivity complete",
+      "finding": "Replay and Gaussian augmentation establish no gain.",
+      "limitations": "Five generation draws, not training replications; 1000 paired diagnosis-stratified subject draws, conditional on fitted models and one site, unadjusted for multiple comparisons. Previously inspected sites. Compare cohorts separately; common-subject results are in evidence.",
+      "metric": "auc",
+      "direction": "higher",
+      "metric_label": "Test ROC-AUC \u2191",
+      "columns": [
+        [
+          "auc",
+          "Test AUC \u2191"
+        ],
+        [
+          "generation_sd",
+          "Generation SD"
+        ],
+        [
+          "balanced_accuracy",
+          "Balanced accuracy \u2191"
+        ],
+        [
+          "auc_difference",
+          "\u0394 real-only AUC"
+        ]
+      ],
+      "protocol_file": "protocols/abide_named110_protocol_20261006.md",
+      "evidence_file": "evidence/abide_named110_results_20261006.json",
+      "dataset_hash": "b284b20abc9b3c632e5f7a8414433e1ea29ccbbbf712d11fb69733169dad93b9",
+      "metric_version": "abide-logistic-utility-named110-v1",
+      "split": "test",
+      "protocol_sha256": "1743c7d4409cbfb150bedc9b9abc1f49660202f19b9d8b6f15f55706a9fd6f17"
+    },
+    {
+      "id": "abide_named110_expanded762_20261006",
+      "domain": "Brain connectivity",
+      "title": "ABIDE \u00b7 110 named regions \u00b7 expanded762",
+      "description": "Re-estimated OAS targets. 488 training, 108 Michigan validation and 166 NYU test subjects. Simple controls; no learned fits.",
+      "status": "Post-pilot sensitivity complete",
+      "finding": "Replay and Gaussian augmentation establish no gain.",
+      "limitations": "Five generation draws, not training replications; 1000 paired diagnosis-stratified subject draws, conditional on fitted models and one site, unadjusted for multiple comparisons. Previously inspected sites. Compare cohorts separately; common-subject results are in evidence.",
+      "metric": "auc",
+      "direction": "higher",
+      "metric_label": "Test ROC-AUC \u2191",
+      "columns": [
+        [
+          "auc",
+          "Test AUC \u2191"
+        ],
+        [
+          "generation_sd",
+          "Generation SD"
+        ],
+        [
+          "balanced_accuracy",
+          "Balanced accuracy \u2191"
+        ],
+        [
+          "auc_difference",
+          "\u0394 real-only AUC"
+        ]
+      ],
+      "protocol_file": "protocols/abide_named110_protocol_20261006.md",
+      "evidence_file": "evidence/abide_named110_results_20261006.json",
+      "dataset_hash": "e54f20edb08c939ca8ac738eaedc159d0aac0bce810f5b2978af984723cf7270",
+      "metric_version": "abide-logistic-utility-named110-v1",
+      "split": "test",
+      "protocol_sha256": "1743c7d4409cbfb150bedc9b9abc1f49660202f19b9d8b6f15f55706a9fd6f17"
+    }
+  ],
+  "records": [
+    {
+      "protocol": "abide_utility_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "a80dd6a3c3b49947dd5444b2dedab76f15d32183b7e1cff81b3edee31b7d56e8",
+      "samples": 160,
+      "id": "abide-real-only",
+      "method": "Real only",
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "auc": 0.7653968253968254,
+        "balanced_accuracy": 0.7015873015873015
+      },
+      "note": "Reference classifier; no synthetic augmentation.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-v1",
+      "protocol_sha256": "ad3c09ab8ca3290aca8875fba055e3a792de7f20b8744892013e0c2dff659b98"
+    },
+    {
+      "protocol": "abide_utility_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "a80dd6a3c3b49947dd5444b2dedab76f15d32183b7e1cff81b3edee31b7d56e8",
+      "samples": 160,
+      "id": "abide-replay",
+      "method": "Training replay",
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7471746031746032,
+        "generation_sd": 0.005375072875340213,
+        "balanced_accuracy": 0.6788888888888889,
+        "structure_swd": 0.4665740758180618,
+        "roi_swd": 0.3431529104709625
+      },
+      "note": "Mean AUC difference from real only: -0.0182; paired subject 95% interval [-0.03159206349206351, -0.005201587301587203]. Unadjusted for multiplicity.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-v1",
+      "protocol_sha256": "ad3c09ab8ca3290aca8875fba055e3a792de7f20b8744892013e0c2dff659b98"
+    },
+    {
+      "protocol": "abide_utility_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "a80dd6a3c3b49947dd5444b2dedab76f15d32183b7e1cff81b3edee31b7d56e8",
+      "samples": 160,
+      "id": "abide-gaussian",
+      "method": "Transformed Gaussian",
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7539365079365079,
+        "generation_sd": 0.007627640656875852,
+        "balanced_accuracy": 0.6982539682539682,
+        "structure_swd": 1.1736956596374513,
+        "roi_swd": 0.3796392887830734
+      },
+      "note": "Mean AUC difference from real only: -0.0115; paired subject 95% interval [-0.03143015873015877, 0.007653968253968393]. Unadjusted for multiplicity.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-v1",
+      "protocol_sha256": "ad3c09ab8ca3290aca8875fba055e3a792de7f20b8744892013e0c2dff659b98"
+    },
+    {
+      "protocol": "abide_utility_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "a80dd6a3c3b49947dd5444b2dedab76f15d32183b7e1cff81b3edee31b7d56e8",
+      "samples": 160,
+      "id": "abide-diffeocfm",
+      "method": "DiffeoCFM selected",
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7441269841269842,
+        "generation_sd": 0.014085457066813762,
+        "balanced_accuracy": 0.6715873015873016,
+        "structure_swd": 1.2188234686851502,
+        "roi_swd": 0.3532957524061203
+      },
+      "note": "Mean AUC difference from real only: -0.0213; paired subject 95% interval [-0.04216269841269854, -0.0007587301587302504]. Unadjusted for multiplicity.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-v1",
+      "protocol_sha256": "ad3c09ab8ca3290aca8875fba055e3a792de7f20b8744892013e0c2dff659b98"
+    },
+    {
+      "protocol": "abide_utility_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "a80dd6a3c3b49947dd5444b2dedab76f15d32183b7e1cff81b3edee31b7d56e8",
+      "samples": 160,
+      "id": "abide-diffeocfm_last",
+      "method": "DiffeoCFM final",
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7397142857142858,
+        "generation_sd": 0.007278604270115108,
+        "balanced_accuracy": 0.6738095238095239,
+        "structure_swd": 1.3488541007041932,
+        "roi_swd": 0.3328568547964096
+      },
+      "note": "Mean AUC difference from real only: -0.0257; paired subject 95% interval [-0.04768412698412696, -0.0034761904761904387]. Unadjusted for multiplicity.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-v1",
+      "protocol_sha256": "ad3c09ab8ca3290aca8875fba055e3a792de7f20b8744892013e0c2dff659b98"
+    },
+    {
+      "protocol": "abide_utility_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "a80dd6a3c3b49947dd5444b2dedab76f15d32183b7e1cff81b3edee31b7d56e8",
+      "samples": 160,
+      "id": "abide-nodeflow",
+      "method": "Node-aware CorrFlow pilot",
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7573333333333333,
+        "generation_sd": 0.017839815226246773,
+        "balanced_accuracy": 0.6888888888888889,
+        "structure_swd": 0.9662230849266052,
+        "roi_swd": 0.3933818399906158
+      },
+      "note": "Mean AUC difference from real only: -0.0081; paired subject 95% interval [-0.04346269841269848, 0.02679841269841271]. Unadjusted for multiplicity.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-v1",
+      "protocol_sha256": "ad3c09ab8ca3290aca8875fba055e3a792de7f20b8744892013e0c2dff659b98"
+    },
+    {
+      "protocol": "abide_utility_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "a80dd6a3c3b49947dd5444b2dedab76f15d32183b7e1cff81b3edee31b7d56e8",
+      "samples": 160,
+      "id": "abide-anonymous_flow",
+      "method": "Anonymous CorrFlow pilot",
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7628253968253969,
+        "generation_sd": 0.016702305056640807,
+        "balanced_accuracy": 0.7036507936507936,
+        "structure_swd": 1.008151078224182,
+        "roi_swd": 0.75248202085495
+      },
+      "note": "Mean AUC difference from real only: -0.0026; paired subject 95% interval [-0.0387857142857143, 0.032798412698412716]. Unadjusted for multiplicity.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-v1",
+      "protocol_sha256": "ad3c09ab8ca3290aca8875fba055e3a792de7f20b8744892013e0c2dff659b98"
+    },
+    {
+      "protocol": "abide_training_replication_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "0857f29b6a280dae2e4977d0bf22c83a576032a484544d11f9e3bf699e0514ae",
+      "samples": 160,
+      "id": "abide-replication-real-only",
+      "method": "Real only",
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "auc": 0.7653968253968254,
+        "auc_difference": 0.0,
+        "balanced_accuracy": 0.7015873015873015
+      },
+      "note": "Identical reference probabilities checked across all queues.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-five-training-v1",
+      "protocol_sha256": "90ca633e36b556dfc55bd7d10688fd3e75fd4e949214698cf7c7e125cb37e5bb"
+    },
+    {
+      "protocol": "abide_training_replication_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "0857f29b6a280dae2e4977d0bf22c83a576032a484544d11f9e3bf699e0514ae",
+      "samples": 160,
+      "id": "abide-replication-replay",
+      "method": "Training replay",
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7471746031746032,
+        "auc_difference": -0.01822222222222225,
+        "balanced_accuracy": 0.6788888888888889
+      },
+      "note": "Fixed training-data control from the original pilot, five generation seeds; not five independent learned fits.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-five-training-v1",
+      "protocol_sha256": "90ca633e36b556dfc55bd7d10688fd3e75fd4e949214698cf7c7e125cb37e5bb"
+    },
+    {
+      "protocol": "abide_training_replication_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "0857f29b6a280dae2e4977d0bf22c83a576032a484544d11f9e3bf699e0514ae",
+      "samples": 160,
+      "id": "abide-replication-gaussian",
+      "method": "Transformed Gaussian",
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7539365079365079,
+        "auc_difference": -0.011460317460317504,
+        "balanced_accuracy": 0.6982539682539682
+      },
+      "note": "Fixed training-data control from the original pilot, five generation seeds; not five independent learned fits.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-five-training-v1",
+      "protocol_sha256": "90ca633e36b556dfc55bd7d10688fd3e75fd4e949214698cf7c7e125cb37e5bb"
+    },
+    {
+      "protocol": "abide_training_replication_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "0857f29b6a280dae2e4977d0bf22c83a576032a484544d11f9e3bf699e0514ae",
+      "samples": 160,
+      "id": "abide-replication-diffeocfm",
+      "method": "DiffeoCFM selected",
+      "training_seeds": 5,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7451809523809524,
+        "auc_difference": -0.02021587301587302,
+        "balanced_accuracy": 0.6721269841269841,
+        "training_sd": 0.005556435304493446
+      },
+      "note": "Five training fits \u00d7 five generation seeds. Joint paired 95% AUC-difference range [-0.040402222222222325, -0.0015768253968254026]; one inspected site, unadjusted for multiplicity.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-five-training-v1",
+      "protocol_sha256": "90ca633e36b556dfc55bd7d10688fd3e75fd4e949214698cf7c7e125cb37e5bb"
+    },
+    {
+      "protocol": "abide_training_replication_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "0857f29b6a280dae2e4977d0bf22c83a576032a484544d11f9e3bf699e0514ae",
+      "samples": 160,
+      "id": "abide-replication-diffeocfm_last",
+      "method": "DiffeoCFM final",
+      "training_seeds": 5,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7396,
+        "auc_difference": -0.025796825396825374,
+        "balanced_accuracy": 0.6733015873015873,
+        "training_sd": 0.003616582284771667
+      },
+      "note": "Five training fits \u00d7 five generation seeds. Joint paired 95% AUC-difference range [-0.04634952380952383, -0.006517301587301597]; one inspected site, unadjusted for multiplicity.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-five-training-v1",
+      "protocol_sha256": "90ca633e36b556dfc55bd7d10688fd3e75fd4e949214698cf7c7e125cb37e5bb"
+    },
+    {
+      "protocol": "abide_training_replication_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "0857f29b6a280dae2e4977d0bf22c83a576032a484544d11f9e3bf699e0514ae",
+      "samples": 160,
+      "id": "abide-replication-nodeflow",
+      "method": "Node-aware CorrFlow",
+      "training_seeds": 5,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7364825396825397,
+        "auc_difference": -0.02891428571428567,
+        "balanced_accuracy": 0.675936507936508,
+        "training_sd": 0.013677574320931677
+      },
+      "note": "Five training fits \u00d7 five generation seeds. Joint paired 95% AUC-difference range [-0.06136349206349194, 0.0032006349206349033]; one inspected site, unadjusted for multiplicity.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-five-training-v1",
+      "protocol_sha256": "90ca633e36b556dfc55bd7d10688fd3e75fd4e949214698cf7c7e125cb37e5bb"
+    },
+    {
+      "protocol": "abide_training_replication_20261005",
+      "status": "locally_audited",
+      "evidence_sha256": "0857f29b6a280dae2e4977d0bf22c83a576032a484544d11f9e3bf699e0514ae",
+      "samples": 160,
+      "id": "abide-replication-anonymous_flow",
+      "method": "Anonymous CorrFlow",
+      "training_seeds": 5,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7313714285714286,
+        "auc_difference": -0.03402539682539685,
+        "balanced_accuracy": 0.6739682539682539,
+        "training_sd": 0.018359232719585603
+      },
+      "note": "Five training fits \u00d7 five generation seeds. Joint paired 95% AUC-difference range [-0.07468111111111116, 0.004355714285714285]; one inspected site, unadjusted for multiplicity.",
+      "dataset_hash": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-five-training-v1",
+      "protocol_sha256": "90ca633e36b556dfc55bd7d10688fd3e75fd4e949214698cf7c7e125cb37e5bb"
+    },
+    {
+      "id": "weather-test-identity",
+      "protocol": "weather_test_20261005",
+      "method": "Identity",
+      "status": "locally_audited",
+      "evidence_sha256": "0c76b78f7d6a2c1fbabcab51ca5dab79490ca8cf99dafe369ce7571f007609f1",
+      "samples": 108,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "aggregate_w1": 0.9076029634022578,
+        "year_groups": 9,
+        "contexts": 12
+      },
+      "note": "Joint year-bootstrap percentile range: [0.8957785723794877, 0.9205775833984716]; not calibrated confidence limits.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-aggregate-variance-w1-v1",
+      "protocol_sha256": "5d17b86dab5baa7e9a3366d7c74e81b9b2b38c934a807cb84e40a00465272eed"
+    },
+    {
+      "id": "weather-test-spatial_kernel",
+      "protocol": "weather_test_20261005",
+      "method": "Spatial kernel",
+      "status": "locally_audited",
+      "evidence_sha256": "0c76b78f7d6a2c1fbabcab51ca5dab79490ca8cf99dafe369ce7571f007609f1",
+      "samples": 108,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "aggregate_w1": 0.1433172567624396,
+        "year_groups": 9,
+        "contexts": 12
+      },
+      "note": "Joint year-bootstrap percentile range: [0.1367614889319315, 0.14989240521418876]; not calibrated confidence limits.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-aggregate-variance-w1-v1",
+      "protocol_sha256": "5d17b86dab5baa7e9a3366d7c74e81b9b2b38c934a807cb84e40a00465272eed"
+    },
+    {
+      "id": "weather-test-pooled_grid_mean",
+      "protocol": "weather_test_20261005",
+      "method": "Pooled grid mean",
+      "status": "locally_audited",
+      "evidence_sha256": "0c76b78f7d6a2c1fbabcab51ca5dab79490ca8cf99dafe369ce7571f007609f1",
+      "samples": 108,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "aggregate_w1": 0.10297390132854,
+        "year_groups": 9,
+        "contexts": 12
+      },
+      "note": "Joint year-bootstrap percentile range: [0.09567229181368364, 0.10978677086052746]; not calibrated confidence limits.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-aggregate-variance-w1-v1",
+      "protocol_sha256": "5d17b86dab5baa7e9a3366d7c74e81b9b2b38c934a807cb84e40a00465272eed"
+    },
+    {
+      "id": "weather-test-conditional_mean",
+      "protocol": "weather_test_20261005",
+      "method": "Conditional mean",
+      "status": "locally_audited",
+      "evidence_sha256": "0c76b78f7d6a2c1fbabcab51ca5dab79490ca8cf99dafe369ce7571f007609f1",
+      "samples": 108,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "aggregate_w1": 0.08237863882726972,
+        "year_groups": 9,
+        "contexts": 12
+      },
+      "note": "Joint year-bootstrap percentile range: [0.0741069581284549, 0.08963095680225538]; not calibrated confidence limits.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-aggregate-variance-w1-v1",
+      "protocol_sha256": "5d17b86dab5baa7e9a3366d7c74e81b9b2b38c934a807cb84e40a00465272eed"
+    },
+    {
+      "id": "weather-test-conditional_replay",
+      "protocol": "weather_test_20261005",
+      "method": "Conditional replay",
+      "status": "locally_audited",
+      "evidence_sha256": "0c76b78f7d6a2c1fbabcab51ca5dab79490ca8cf99dafe369ce7571f007609f1",
+      "samples": 108,
+      "training_seeds": 0,
+      "generation_seeds": 1,
+      "metrics": {
+        "aggregate_w1": 0.04769161829629511,
+        "year_groups": 9,
+        "contexts": 12
+      },
+      "note": "Joint year-bootstrap percentile range: [0.049854545770722104, 0.06744187593027816]; not calibrated confidence limits.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-aggregate-variance-w1-v1",
+      "protocol_sha256": "5d17b86dab5baa7e9a3366d7c74e81b9b2b38c934a807cb84e40a00465272eed"
+    },
+    {
+      "id": "weather-spatial_transfer-identity",
+      "protocol": "weather_spatial_transfer_20261005",
+      "method": "Identity",
+      "status": "locally_audited",
+      "evidence_sha256": "0c76b78f7d6a2c1fbabcab51ca5dab79490ca8cf99dafe369ce7571f007609f1",
+      "samples": 36,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "aggregate_w1": 1.039682911604969,
+        "year_groups": 9,
+        "contexts": 4
+      },
+      "note": "Joint year-bootstrap percentile range: [1.023751235118262, 1.0568313892058094]; not calibrated confidence limits.",
+      "dataset_hash": "3f07df5e9b45b7c0c18f3e11fc2a1740e89fe78d9cdbd979d292f8dd431f4167",
+      "split": "spatial_transfer",
+      "metric_version": "weather-aggregate-variance-w1-v1",
+      "protocol_sha256": "5d17b86dab5baa7e9a3366d7c74e81b9b2b38c934a807cb84e40a00465272eed"
+    },
+    {
+      "id": "weather-spatial_transfer-spatial_kernel",
+      "protocol": "weather_spatial_transfer_20261005",
+      "method": "Spatial kernel",
+      "status": "locally_audited",
+      "evidence_sha256": "0c76b78f7d6a2c1fbabcab51ca5dab79490ca8cf99dafe369ce7571f007609f1",
+      "samples": 36,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "aggregate_w1": 0.2549773010335703,
+        "year_groups": 9,
+        "contexts": 4
+      },
+      "note": "Joint year-bootstrap percentile range: [0.24126793613479325, 0.26928774388200977]; not calibrated confidence limits.",
+      "dataset_hash": "3f07df5e9b45b7c0c18f3e11fc2a1740e89fe78d9cdbd979d292f8dd431f4167",
+      "split": "spatial_transfer",
+      "metric_version": "weather-aggregate-variance-w1-v1",
+      "protocol_sha256": "5d17b86dab5baa7e9a3366d7c74e81b9b2b38c934a807cb84e40a00465272eed"
+    },
+    {
+      "id": "weather-spatial_transfer-pooled_grid_mean",
+      "protocol": "weather_spatial_transfer_20261005",
+      "method": "Pooled grid mean",
+      "status": "locally_audited",
+      "evidence_sha256": "0c76b78f7d6a2c1fbabcab51ca5dab79490ca8cf99dafe369ce7571f007609f1",
+      "samples": 36,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "aggregate_w1": 0.1830567699267852,
+        "year_groups": 9,
+        "contexts": 4
+      },
+      "note": "Joint year-bootstrap percentile range: [0.1686610752152124, 0.19593398595658945]; not calibrated confidence limits.",
+      "dataset_hash": "3f07df5e9b45b7c0c18f3e11fc2a1740e89fe78d9cdbd979d292f8dd431f4167",
+      "split": "spatial_transfer",
+      "metric_version": "weather-aggregate-variance-w1-v1",
+      "protocol_sha256": "5d17b86dab5baa7e9a3366d7c74e81b9b2b38c934a807cb84e40a00465272eed"
+    },
+    {
+      "id": "weather-generation-gaussian",
+      "protocol": "weather_generation_20261005",
+      "method": "Transformed Gaussian",
+      "status": "locally_audited",
+      "evidence_sha256": "7c62a43aac66a80e1f74e86199f955d14d1d666c848cdc7da12ae091beefd3b3",
+      "samples": 108,
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "aggregate_w1": 0.10757655414721715,
+        "generation_sd": 0.0001671403390005909,
+        "structure_swd": 2.003367578983307
+      },
+      "note": "200 generated matrices per context; one model fit. Final weights are sensitivity only; epoch 190 selected on validation.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-variance-w1-generated200-v1",
+      "protocol_sha256": "8fda4c302c25b7b73ae53126338c29b5e38b99718b1c34201318ecd009cd6c74"
+    },
+    {
+      "id": "weather-generation-diffeocfm",
+      "protocol": "weather_generation_20261005",
+      "method": "DiffeoCFM (selected)",
+      "status": "locally_audited",
+      "evidence_sha256": "7c62a43aac66a80e1f74e86199f955d14d1d666c848cdc7da12ae091beefd3b3",
+      "samples": 108,
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "metrics": {
+        "aggregate_w1": 0.08940856630039475,
+        "generation_sd": 0.000898230198872285,
+        "structure_swd": 1.7872187495231628
+      },
+      "note": "200 generated matrices per context; one model fit. Final weights are sensitivity only; epoch 190 selected on validation.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-variance-w1-generated200-v1",
+      "protocol_sha256": "8fda4c302c25b7b73ae53126338c29b5e38b99718b1c34201318ecd009cd6c74"
+    },
+    {
+      "id": "weather-generation-diffeocfm_last",
+      "protocol": "weather_generation_20261005",
+      "method": "DiffeoCFM (final)",
+      "status": "locally_audited",
+      "evidence_sha256": "7c62a43aac66a80e1f74e86199f955d14d1d666c848cdc7da12ae091beefd3b3",
+      "samples": 108,
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "metrics": {
+        "aggregate_w1": 0.0871239344775653,
+        "generation_sd": 0.0007116903664800155,
+        "structure_swd": 1.7803291281064353
+      },
+      "note": "200 generated matrices per context; one model fit. Final weights are sensitivity only; epoch 190 selected on validation.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-variance-w1-generated200-v1",
+      "protocol_sha256": "8fda4c302c25b7b73ae53126338c29b5e38b99718b1c34201318ecd009cd6c74"
+    },
+    {
+      "id": "weather-generation-replay",
+      "protocol": "weather_generation_20261005",
+      "method": "Region / quarter replay",
+      "status": "locally_audited",
+      "evidence_sha256": "7c62a43aac66a80e1f74e86199f955d14d1d666c848cdc7da12ae091beefd3b3",
+      "samples": 108,
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "aggregate_w1": 0.04825848779921723,
+        "generation_sd": 0.0007469564015017232,
+        "structure_swd": 0.3872608209649722
+      },
+      "note": "200 generated matrices per context; one model fit. Final weights are sensitivity only; epoch 190 selected on validation.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-variance-w1-generated200-v1",
+      "protocol_sha256": "8fda4c302c25b7b73ae53126338c29b5e38b99718b1c34201318ecd009cd6c74"
+    },
+    {
+      "id": "weather-generation-conditional_mean",
+      "protocol": "weather_generation_20261005",
+      "method": "Region / quarter mean",
+      "status": "locally_audited",
+      "evidence_sha256": "7c62a43aac66a80e1f74e86199f955d14d1d666c848cdc7da12ae091beefd3b3",
+      "samples": 108,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "aggregate_w1": 0.08237863882726972
+      },
+      "note": "Deterministic train-fitted control; exact agreement with the original baseline report was checked.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-variance-w1-generated200-v1",
+      "protocol_sha256": "8fda4c302c25b7b73ae53126338c29b5e38b99718b1c34201318ecd009cd6c74"
+    },
+    {
+      "id": "weather-generation-pooled_grid_mean",
+      "protocol": "weather_generation_20261005",
+      "method": "Pooled matrix mean",
+      "status": "locally_audited",
+      "evidence_sha256": "7c62a43aac66a80e1f74e86199f955d14d1d666c848cdc7da12ae091beefd3b3",
+      "samples": 108,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "aggregate_w1": 0.10297390132854
+      },
+      "note": "Deterministic train-fitted control; exact agreement with the original baseline report was checked.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-variance-w1-generated200-v1",
+      "protocol_sha256": "8fda4c302c25b7b73ae53126338c29b5e38b99718b1c34201318ecd009cd6c74"
+    },
+    {
+      "id": "weather-generation-spatial_kernel",
+      "protocol": "weather_generation_20261005",
+      "method": "Spatial kernel",
+      "status": "locally_audited",
+      "evidence_sha256": "7c62a43aac66a80e1f74e86199f955d14d1d666c848cdc7da12ae091beefd3b3",
+      "samples": 108,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "aggregate_w1": 0.1433172567624396
+      },
+      "note": "Deterministic train-fitted control; exact agreement with the original baseline report was checked.",
+      "dataset_hash": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "split": "test",
+      "metric_version": "weather-variance-w1-generated200-v1",
+      "protocol_sha256": "8fda4c302c25b7b73ae53126338c29b5e38b99718b1c34201318ecd009cd6c74"
+    },
+    {
+      "id": "legacy-unconditional-selected",
+      "protocol": "legacy_unconditional_validation_20261005",
+      "method": "CorrGAN reference (selected)",
+      "status": "locally_audited",
+      "evidence_sha256": "14a98eae330c3c1dc9fc053c46e904f18a123837363211589e3cfa3fbaa3b77e",
+      "samples": 300,
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "metrics": {
+        "feature_swd": 2.4874953269958495,
+        "precision": 0.0,
+        "recall": 0.0,
+        "portfolio_swd": 2.9734460353851317,
+        "generation_sd": 0.015076150903625777
+      },
+      "note": "Validation only; epoch 45 selected, final epoch 50. Projection seed 2027; native selection seed 44301. Original training recipe remains unverified.",
+      "dataset_hash": "2fd4405f2e6e61bfce3259e3aca211f5d5657321f1e35a6e0c1e46e586b027ad",
+      "split": "validation",
+      "metric_version": "legacy-unconditional-validation-300-v1",
+      "protocol_sha256": "bdbe011eb539f2384717a33fb98e68e5fc92cee98faa4d3ffc2c68ad32e21cd2"
+    },
+    {
+      "id": "legacy-unconditional-final",
+      "protocol": "legacy_unconditional_validation_20261005",
+      "method": "CorrGAN reference (final)",
+      "status": "locally_audited",
+      "evidence_sha256": "14a98eae330c3c1dc9fc053c46e904f18a123837363211589e3cfa3fbaa3b77e",
+      "samples": 300,
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "metrics": {
+        "feature_swd": 3.417619323730469,
+        "precision": 0.0,
+        "recall": 0.0,
+        "portfolio_swd": 3.6298304080963133,
+        "generation_sd": 0.08277598955599857
+      },
+      "note": "Validation only; epoch 45 selected, final epoch 50. Projection seed 2027; native selection seed 44301. Original training recipe remains unverified.",
+      "dataset_hash": "2fd4405f2e6e61bfce3259e3aca211f5d5657321f1e35a6e0c1e46e586b027ad",
+      "split": "validation",
+      "metric_version": "legacy-unconditional-validation-300-v1",
+      "protocol_sha256": "bdbe011eb539f2384717a33fb98e68e5fc92cee98faa4d3ffc2c68ad32e21cd2"
+    },
+    {
+      "id": "legacy-unconditional-replay",
+      "protocol": "legacy_unconditional_validation_20261005",
+      "method": "Training replay",
+      "status": "locally_audited",
+      "evidence_sha256": "14a98eae330c3c1dc9fc053c46e904f18a123837363211589e3cfa3fbaa3b77e",
+      "samples": 300,
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "feature_swd": 0.1143289253115654,
+        "precision": 0.908,
+        "recall": 0.9066666666666666,
+        "portfolio_swd": 0.13915392905473709,
+        "generation_sd": 0.022216394133815903
+      },
+      "note": "Validation only; epoch 45 selected, final epoch 50. Projection seed 2027; native selection seed 44301. Original training recipe remains unverified.",
+      "dataset_hash": "2fd4405f2e6e61bfce3259e3aca211f5d5657321f1e35a6e0c1e46e586b027ad",
+      "split": "validation",
+      "metric_version": "legacy-unconditional-validation-300-v1",
+      "protocol_sha256": "bdbe011eb539f2384717a33fb98e68e5fc92cee98faa4d3ffc2c68ad32e21cd2"
+    },
+    {
+      "id": "taiwan-ccorrgan",
+      "protocol": "taiwan_categorical_20261005",
+      "method": "cCorrGAN reimplementation",
+      "status": "locally_audited",
+      "evidence_sha256": "b20573dfb303ded0d1208586bb217eca1cd68800431740f265e52aa7a7e50d6a",
+      "samples": 1500,
+      "training_seeds": 5,
+      "generation_seeds": 5,
+      "metrics": {
+        "feature_swd": 4.0389703750610355,
+        "recall": 0.40066666666666667,
+        "portfolio_swd": 818.722200012207,
+        "classifier_auc": 1.0,
+        "feature_sd": 0.15372630318736677
+      },
+      "note": "training and paired generation variability. Selected checkpoints; final weights retained in evidence.",
+      "dataset_hash": "5fe3cca2c289c8b1736e2f8cdc114b20d83bb9df51ae227ce58cc2edc86056ec",
+      "split": "test",
+      "metric_version": "corrbench-21feature-float32-v1",
+      "protocol_sha256": "4f925444971c5f7c32587c95a007ce9a4b3435c2ba985cf919fafc6970a61b6e"
+    },
+    {
+      "id": "taiwan-corrflow",
+      "protocol": "taiwan_categorical_20261005",
+      "method": "CorrFlow",
+      "status": "locally_audited",
+      "evidence_sha256": "b20573dfb303ded0d1208586bb217eca1cd68800431740f265e52aa7a7e50d6a",
+      "samples": 1500,
+      "training_seeds": 5,
+      "generation_seeds": 5,
+      "metrics": {
+        "feature_swd": 0.4709221601486206,
+        "recall": 0.32039999999999996,
+        "portfolio_swd": 0.6243374347686768,
+        "classifier_auc": 0.9990816,
+        "feature_sd": 0.06150954469169299
+      },
+      "note": "training and paired generation variability. Selected checkpoints; final weights retained in evidence.",
+      "dataset_hash": "5fe3cca2c289c8b1736e2f8cdc114b20d83bb9df51ae227ce58cc2edc86056ec",
+      "split": "test",
+      "metric_version": "corrbench-21feature-float32-v1",
+      "protocol_sha256": "4f925444971c5f7c32587c95a007ce9a4b3435c2ba985cf919fafc6970a61b6e"
+    },
+    {
+      "id": "taiwan-diffeocfm",
+      "protocol": "taiwan_categorical_20261005",
+      "method": "DiffeoCFM",
+      "status": "locally_audited",
+      "evidence_sha256": "b20573dfb303ded0d1208586bb217eca1cd68800431740f265e52aa7a7e50d6a",
+      "samples": 1500,
+      "training_seeds": 5,
+      "generation_seeds": 5,
+      "metrics": {
+        "feature_swd": 0.7512268900871277,
+        "recall": 0.3549333333333334,
+        "portfolio_swd": 0.8619768261909485,
+        "classifier_auc": 0.9967882666666668,
+        "feature_sd": 0.01880227111943837
+      },
+      "note": "training and paired generation variability. Selected checkpoints; final weights retained in evidence.",
+      "dataset_hash": "5fe3cca2c289c8b1736e2f8cdc114b20d83bb9df51ae227ce58cc2edc86056ec",
+      "split": "test",
+      "metric_version": "corrbench-21feature-float32-v1",
+      "protocol_sha256": "4f925444971c5f7c32587c95a007ce9a4b3435c2ba985cf919fafc6970a61b6e"
+    },
+    {
+      "id": "taiwan-gaussian",
+      "protocol": "taiwan_categorical_20261005",
+      "method": "Transformed Gaussian",
+      "status": "locally_audited",
+      "evidence_sha256": "b20573dfb303ded0d1208586bb217eca1cd68800431740f265e52aa7a7e50d6a",
+      "samples": 1500,
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "feature_swd": 0.8708550691604614,
+        "recall": 0.5042666666666666,
+        "portfolio_swd": 0.810726010799408,
+        "classifier_auc": 0.9954996444444444,
+        "feature_sd": 0.005841324576597056
+      },
+      "note": "generation variability; same fitted training data. Selected checkpoints; final weights retained in evidence.",
+      "dataset_hash": "5fe3cca2c289c8b1736e2f8cdc114b20d83bb9df51ae227ce58cc2edc86056ec",
+      "split": "test",
+      "metric_version": "corrbench-21feature-float32-v1",
+      "protocol_sha256": "4f925444971c5f7c32587c95a007ce9a4b3435c2ba985cf919fafc6970a61b6e"
+    },
+    {
+      "id": "taiwan-replay",
+      "protocol": "taiwan_categorical_20261005",
+      "method": "Training replay",
+      "status": "locally_audited",
+      "evidence_sha256": "b20573dfb303ded0d1208586bb217eca1cd68800431740f265e52aa7a7e50d6a",
+      "samples": 1500,
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "feature_swd": 0.8770354270935059,
+        "recall": 0.5896,
+        "portfolio_swd": 1.106594443321228,
+        "classifier_auc": 0.9553996444444444,
+        "feature_sd": 0.008314359610135427
+      },
+      "note": "generation variability; same fitted training data. Selected checkpoints; final weights retained in evidence.",
+      "dataset_hash": "5fe3cca2c289c8b1736e2f8cdc114b20d83bb9df51ae227ce58cc2edc86056ec",
+      "split": "test",
+      "metric_version": "corrbench-21feature-float32-v1",
+      "protocol_sha256": "4f925444971c5f7c32587c95a007ce9a4b3435c2ba985cf919fafc6970a61b6e"
+    },
+    {
+      "id": "named110-same601-real_only",
+      "protocol": "abide_named110_same601_20261006",
+      "method": "Real only",
+      "status": "locally_audited",
+      "evidence_sha256": "7d70502badf614814197d8516c8443c6256a4ee525ab0c4471cd3e66f008d24d",
+      "samples": 160,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "auc": 0.7725396825396825,
+        "generation_sd": 0.0,
+        "balanced_accuracy": 0.7031746031746031,
+        "auc_difference": 0.0
+      },
+      "note": "Paired subject 95% interval, difference from real-only: [0.0, 0.0]. Conditional on fitted models and this site; unadjusted.",
+      "dataset_hash": "b284b20abc9b3c632e5f7a8414433e1ea29ccbbbf712d11fb69733169dad93b9",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-named110-v1",
+      "protocol_sha256": "1743c7d4409cbfb150bedc9b9abc1f49660202f19b9d8b6f15f55706a9fd6f17"
+    },
+    {
+      "id": "named110-same601-replay",
+      "protocol": "abide_named110_same601_20261006",
+      "method": "Training replay",
+      "status": "locally_audited",
+      "evidence_sha256": "7d70502badf614814197d8516c8443c6256a4ee525ab0c4471cd3e66f008d24d",
+      "samples": 160,
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7543492063492063,
+        "generation_sd": 0.005911073602254241,
+        "balanced_accuracy": 0.676984126984127,
+        "auc_difference": -0.0181904761904762
+      },
+      "note": "Paired subject 95% interval, difference from real-only: [-0.03133412698412698, -0.0050476190476190785]. Conditional on fitted models and this site; unadjusted.",
+      "dataset_hash": "b284b20abc9b3c632e5f7a8414433e1ea29ccbbbf712d11fb69733169dad93b9",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-named110-v1",
+      "protocol_sha256": "1743c7d4409cbfb150bedc9b9abc1f49660202f19b9d8b6f15f55706a9fd6f17"
+    },
+    {
+      "id": "named110-same601-gaussian",
+      "protocol": "abide_named110_same601_20261006",
+      "method": "Transformed Gaussian",
+      "status": "locally_audited",
+      "evidence_sha256": "7d70502badf614814197d8516c8443c6256a4ee525ab0c4471cd3e66f008d24d",
+      "samples": 160,
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7723809523809524,
+        "generation_sd": 0.004880791067149761,
+        "balanced_accuracy": 0.6882539682539682,
+        "auc_difference": -0.00015873015873013596
+      },
+      "note": "Paired subject 95% interval, difference from real-only: [-0.019030952380952298, 0.018699206349206313]. Conditional on fitted models and this site; unadjusted.",
+      "dataset_hash": "b284b20abc9b3c632e5f7a8414433e1ea29ccbbbf712d11fb69733169dad93b9",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-named110-v1",
+      "protocol_sha256": "1743c7d4409cbfb150bedc9b9abc1f49660202f19b9d8b6f15f55706a9fd6f17"
+    },
+    {
+      "id": "named110-expanded762-real_only",
+      "protocol": "abide_named110_expanded762_20261006",
+      "method": "Real only",
+      "status": "locally_audited",
+      "evidence_sha256": "7d70502badf614814197d8516c8443c6256a4ee525ab0c4471cd3e66f008d24d",
+      "samples": 166,
+      "training_seeds": 0,
+      "generation_seeds": 0,
+      "metrics": {
+        "auc": 0.8012706855791962,
+        "generation_sd": 0.0,
+        "balanced_accuracy": 0.7170508274231678,
+        "auc_difference": 0.0
+      },
+      "note": "Paired subject 95% interval, difference from real-only: [0.0, 0.0]. Conditional on fitted models and this site; unadjusted.",
+      "dataset_hash": "e54f20edb08c939ca8ac738eaedc159d0aac0bce810f5b2978af984723cf7270",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-named110-v1",
+      "protocol_sha256": "1743c7d4409cbfb150bedc9b9abc1f49660202f19b9d8b6f15f55706a9fd6f17"
+    },
+    {
+      "id": "named110-expanded762-replay",
+      "protocol": "abide_named110_expanded762_20261006",
+      "method": "Training replay",
+      "status": "locally_audited",
+      "evidence_sha256": "7d70502badf614814197d8516c8443c6256a4ee525ab0c4471cd3e66f008d24d",
+      "samples": 166,
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7813534278959812,
+        "generation_sd": 0.010149644559979867,
+        "balanced_accuracy": 0.7288416075650118,
+        "auc_difference": -0.01991725768321506
+      },
+      "note": "Paired subject 95% interval, difference from real-only: [-0.03948212174940898, -0.003040780141843924]. Conditional on fitted models and this site; unadjusted.",
+      "dataset_hash": "e54f20edb08c939ca8ac738eaedc159d0aac0bce810f5b2978af984723cf7270",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-named110-v1",
+      "protocol_sha256": "1743c7d4409cbfb150bedc9b9abc1f49660202f19b9d8b6f15f55706a9fd6f17"
+    },
+    {
+      "id": "named110-expanded762-gaussian",
+      "protocol": "abide_named110_expanded762_20261006",
+      "method": "Transformed Gaussian",
+      "status": "locally_audited",
+      "evidence_sha256": "7d70502badf614814197d8516c8443c6256a4ee525ab0c4471cd3e66f008d24d",
+      "samples": 166,
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "metrics": {
+        "auc": 0.7682328605200947,
+        "generation_sd": 0.012248719939037431,
+        "balanced_accuracy": 0.7150118203309692,
+        "auc_difference": -0.03303782505910158
+      },
+      "note": "Paired subject 95% interval, difference from real-only: [-0.05898492907801424, -0.009454787234042568]. Conditional on fitted models and this site; unadjusted.",
+      "dataset_hash": "e54f20edb08c939ca8ac738eaedc159d0aac0bce810f5b2978af984723cf7270",
+      "split": "test",
+      "metric_version": "abide-logistic-utility-named110-v1",
+      "protocol_sha256": "1743c7d4409cbfb150bedc9b9abc1f49660202f19b9d8b6f15f55706a9fd6f17"
+    }
+  ],
+  "review_scope": "Local provenance audits; no external review claimed."
+}

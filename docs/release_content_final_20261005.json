@@ -1,0 +1,32 @@
+{
+  "scope": "Final source/wheel contents; all 73 scientific modules unchanged from the 103-test installed/source audit. New reports/helpers have separately recorded execution and browser checks. Tests not redundantly rerun for documentation-only changes.",
+  "packages": {
+    "corrbench": {
+      "source_commit": "5d49a1082ea73f1942b746bbac180017b3a57b06",
+      "wheel_sha256": "60765a6bd365308971b8263a8de38c3521fd2c0dae02f0e33e6626ed5f21d09f",
+      "sdist_sha256": "d498e7043a080a1cbe59584744af58ce46f7126bbb64ade7fd24d83ba848a369",
+      "tested_modules_unchanged": 36,
+      "readme_images_included": [
+        "docs/figures/domain_examples.png"
+      ]
+    },
+    "corrflow": {
+      "source_commit": "fc0f9dcbaa8b9a4d8461813d3d97821099774215",
+      "wheel_sha256": "0412c1b1e006388671a25786e0509c28c260e1097ca6b211317252801586c96a",
+      "sdist_sha256": "d35cb6b8c0204b21eff41c9e35b516fec51ffd4f6e19f6ab39972e1672e929ce",
+      "tested_modules_unchanged": 24,
+      "readme_images_included": [
+        "docs/figures/matched_taiwan.png"
+      ]
+    },
+    "corrgan": {
+      "source_commit": "ebc291b7a9cce2696bc363969a61e9325b9eeb36",
+      "wheel_sha256": "e14b9defae65da6d278ff8705c741ff516c658615848f92211ad9a871ff1c939",
+      "sdist_sha256": "4528fa325e8c858a105a31a73737e2efa751dcf1bbc2c28b2e6bcf6c09b58ef2",
+      "tested_modules_unchanged": 13,
+      "readme_images_included": [
+        "docs/figures/unconditional_validation.png"
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+market: taiwan_final_sample_holdout
+source: data/inputs/taiwan_returns.parquet
+columns:
+  date: date
+  asset: instrument_id
+  return: daily_total_return
+  liquidity: median_value_traded_60d
+sampling:
+  matrix_dim: 80
+  lookback: 252
+  liquid_universe_size: 500
+  annualization: 252
+  stress_threshold: -0.5
+  rally_threshold: 2.0
+regime_quantiles: [0.2, 0.8]
+splits:
+  train:
+    start: 2014-01-01
+    end: 2020-12-31
+    samples_per_date: 8
+    seed: 12001
+  validation:
+    start: 2021-01-01
+    end: 2022-12-31
+    samples_per_date: 8
+    seed: 12002
+  test:
+    start: 2023-01-01
+    end: 2026-07-30
+    samples_per_date: 8
+    seed: 93003

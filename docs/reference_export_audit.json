@@ -1,0 +1,186 @@
+{
+  "scope": "All frozen financial matrix arrays, not upstream prices or model training",
+  "publication": "local staging only; financial data rights pending",
+  "releases": {
+    "finance_taiwan_n80": {
+      "metadata_sha256": "ed3b648405c3362923f4ef8996d3fe45990a10663b0d4c321150c9d1b3d3f6f5",
+      "release_manifest_sha256": "728b1c0ba5d6d1a75dec1a12f7aed1a580940f0e561f3acad1998d311894d3ff",
+      "splits": {
+        "train": {
+          "samples": 13600,
+          "arrays_equal": [
+            "assets",
+            "end_dates",
+            "labels",
+            "matrices",
+            "minimum_eigenvalues",
+            "original_labels",
+            "sharpes"
+          ],
+          "input_npz_sha256": "a266c9449f2297d7d777313607e5748a20066554d5dd1e27462a7bae8ef48d65",
+          "parquet_sha256": "6ca6d1b3ec32c65c02a1d8bcc18e259ad086177e134630a315f84bd37908ae02",
+          "minimum_eigenvalue_float64": 0.04027395521771699
+        },
+        "validation": {
+          "samples": 3920,
+          "arrays_equal": [
+            "assets",
+            "end_dates",
+            "labels",
+            "matrices",
+            "minimum_eigenvalues",
+            "original_labels",
+            "sharpes"
+          ],
+          "input_npz_sha256": "a4efa7c3a54e134150d9e67945a0750429202c9b8ca5e705e4cc9aae248fdd58",
+          "parquet_sha256": "1a0b9bb00e2bc4fc77d97b9ba3099494379e6ddc86b4397a901ca83c632ec52f",
+          "minimum_eigenvalue_float64": 0.04022318495964728
+        },
+        "test": {
+          "samples": 6888,
+          "arrays_equal": [
+            "assets",
+            "end_dates",
+            "labels",
+            "matrices",
+            "minimum_eigenvalues",
+            "original_labels",
+            "sharpes"
+          ],
+          "input_npz_sha256": "6966f1e712819d506e2eb6904380439f7cbadbc0c5ca1f2ec030a1d129b28a37",
+          "parquet_sha256": "53c21c2d5d0e47b38906b5d8c4a1fad4867b3e3e60686ae06872c4dfbed15917",
+          "minimum_eigenvalue_float64": 0.046394686899415755
+        }
+      }
+    },
+    "finance_japan_n80": {
+      "metadata_sha256": "3a030c72940e29792ad2a54f17255112de22488d1d0ef11675217615665400bb",
+      "release_manifest_sha256": "45229c2eeb5bb8f0bcd8422eee48b551e006e1358906cc6b0d266790afdfd1ac",
+      "splits": {
+        "train": {
+          "samples": 3848,
+          "arrays_equal": [
+            "assets",
+            "end_dates",
+            "labels",
+            "matrices",
+            "minimum_eigenvalues",
+            "original_labels",
+            "sharpes"
+          ],
+          "input_npz_sha256": "e6b8441dddca45279a041a1b1c7f9c696f50126ded1a63d42df661896773ca7f",
+          "parquet_sha256": "580664121d9ae3267fb708b109fe9e323b0a9e24d798f37402f0cc1e011f99ae",
+          "minimum_eigenvalue_float64": 0.03993520682171023
+        },
+        "validation": {
+          "samples": 1936,
+          "arrays_equal": [
+            "assets",
+            "end_dates",
+            "labels",
+            "matrices",
+            "minimum_eigenvalues",
+            "original_labels",
+            "sharpes"
+          ],
+          "input_npz_sha256": "a2f73bce2854a5b1c489cd53ebc5c02201d2c0e3df25815abb75b71b012182cd",
+          "parquet_sha256": "a895c5bcf53bb6ccfcf98f158e61fc0704e981b8f2c77f16b91542e8f6bc498d",
+          "minimum_eigenvalue_float64": 0.02155768864906918
+        },
+        "test": {
+          "samples": 2888,
+          "arrays_equal": [
+            "assets",
+            "end_dates",
+            "labels",
+            "matrices",
+            "minimum_eigenvalues",
+            "original_labels",
+            "sharpes"
+          ],
+          "input_npz_sha256": "a97317addc95a7ad358021bc710d2ab4be92bc169b6699560c178996c585c5e8",
+          "parquet_sha256": "0f5016ed7ecdecf779ebc16c94fc36d12032b46f79d3f7b4e81856e3d87e661d",
+          "minimum_eigenvalue_float64": 0.028401478233688292
+        }
+      }
+    }
+  },
+  "total_matrices": 33080,
+  "hf_client": {
+    "datasets_version": "5.0.1",
+    "network": "offline",
+    "datasets": {
+      "finance_taiwan_n80": {
+        "train": {
+          "rows": 13600,
+          "checked_client_rows": [
+            0,
+            6800,
+            13599
+          ]
+        },
+        "validation": {
+          "rows": 3920,
+          "checked_client_rows": [
+            0,
+            1960,
+            3919
+          ]
+        },
+        "test": {
+          "rows": 6888,
+          "checked_client_rows": [
+            0,
+            3444,
+            6887
+          ]
+        }
+      },
+      "finance_japan_n80": {
+        "train": {
+          "rows": 3848,
+          "checked_client_rows": [
+            0,
+            1924,
+            3847
+          ]
+        },
+        "validation": {
+          "rows": 1936,
+          "checked_client_rows": [
+            0,
+            968,
+            1935
+          ]
+        },
+        "test": {
+          "rows": 2888,
+          "checked_client_rows": [
+            0,
+            1444,
+            2887
+          ]
+        }
+      }
+    }
+  },
+  "validation": {
+    "corrbench_source_tests_passed": 36,
+    "installed_wheel_tests_across_three_repositories_passed": 48,
+    "ruff": "passed",
+    "wheel_and_sdist": "built",
+    "installed_export_cli": "help succeeded",
+    "hosted_hub_validation": "not performed; local offline client only",
+    "clean_environment_scope": "HF client installed separately; model tests reused existing scientific dependencies"
+  },
+  "code_sha256": {
+    "src/corrbench/reference.py": "455b4b4fb28e9d5bf6f16dc5e02a818db838fe37d22dc909cde5f4d6fafe16fc",
+    "src/corrbench/cli/export_reference.py": "4edeeda7b4cbdb058caa5639115476f3d7786cd1f71cdda43e52f939acd4c739",
+    "examples/stage_paper_reference.py": "13d245b8544838cc77aa30ccbfe92d0b565f6d18d83b66ab295fa84f0a3a9f5a",
+    "tests/test_reference.py": "01db0a7d5ec117fcc6ea25e6f23bbd4f79c63310777ae1cedd5435e86f186aaf"
+  },
+  "build_sha256": {
+    "corrbench-0.1.0.dev0-py3-none-any.whl": "443ecf065c6f5decc4ef5cec69fac542d75f2e5ebce479396a29cb7f6ef9c162",
+    "corrbench-0.1.0.dev0.tar.gz": "ba6a2732731436d06d32a023a54edb6951ed117cb90b800daf052facee24d13b"
+  }
+}

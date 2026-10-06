@@ -1,0 +1,67 @@
+{
+  "status": "passed",
+  "protocol": "weather_ncep_exploratory_generation_20261005",
+  "scope": "Post-baseline exploratory single-training-seed study",
+  "selected_epoch": 190,
+  "completed_epochs": 200,
+  "training_seed": 1701,
+  "generation_seeds": [
+    2027,
+    2028,
+    2029,
+    2030,
+    2031
+  ],
+  "per_condition": 200,
+  "source_sha256": {
+    "train": "d90d06d0cae39fdb1b98511d6fc0f1dd2981dc11725d2f5233b7bb8390538fd7",
+    "validation": "95f87e2463fc5b30cfc7bdab12c70f5c105ba6cdde19ea9b5dba87a12fcb5057",
+    "test": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf"
+  },
+  "report_sha256": "2dc17ec0bb6baa37f68292ee8f20a59ce0909e7278c3f739809c9b035609874b",
+  "plan_sha256": "0f37a8f2415a68196c5da4f8c651300155f34a92c2d29edd77704d2df198e447",
+  "summary_code_sha256": "f993a57fdbe29d5b5edcca97edd4b8280aa1c0bb30f96838d5aed4b44154e179",
+  "rows": [
+    {
+      "method": "gaussian",
+      "label": "Transformed Gaussian",
+      "aggregate_w1_mean": 0.10757655414721715,
+      "generation_sd": 0.0001671403390005909,
+      "structure_swd_mean": 2.003367578983307,
+      "structure_generation_sd": 0.011984758671401977
+    },
+    {
+      "method": "diffeocfm",
+      "label": "DiffeoCFM (selected)",
+      "aggregate_w1_mean": 0.08940856630039475,
+      "generation_sd": 0.000898230198872285,
+      "structure_swd_mean": 1.7872187495231628,
+      "structure_generation_sd": 0.005269107154616782
+    },
+    {
+      "method": "diffeocfm_last",
+      "label": "DiffeoCFM (final)",
+      "aggregate_w1_mean": 0.0871239344775653,
+      "generation_sd": 0.0007116903664800155,
+      "structure_swd_mean": 1.7803291281064353,
+      "structure_generation_sd": 0.008138651406215154
+    },
+    {
+      "method": "replay",
+      "label": "Region / quarter replay",
+      "aggregate_w1_mean": 0.04825848779921723,
+      "generation_sd": 0.0007469564015017232,
+      "structure_swd_mean": 0.3872608209649722,
+      "structure_generation_sd": 0.015540592820743151
+    }
+  ],
+  "deterministic_controls": {
+    "conditional_mean": 0.08237863882726972,
+    "pooled_grid_mean": 0.10297390132854,
+    "spatial_kernel": 0.1433172567624396
+  },
+  "valid_fraction_all_generated": 1.0,
+  "test_year_groups": 9,
+  "limits": "Exploratory inspected periods; one training seed. Generation SD is not uncertainty over future years. Structural SWD uses matched subsets of only nine matrices per condition; read utility separately.",
+  "finding": "DiffeoCFM improves on its Gaussian prior but does not beat replay or the conditional mean on aggregate-variance W1."
+}

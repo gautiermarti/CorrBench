@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CorrBench — realistic dependence, measurable utility</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="preview">PRIVATE RESEARCH PREVIEW <span>Public release in preparation · October 2026</span></div>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="CorrBench home"><span class="mark" aria-hidden="true">▦</span> CorrBench</a>
+    <nav aria-label="Main navigation"><a href="#datasets">Datasets</a><a href="#results">Results</a><a href="#reproduce">Reproduce</a></nav>
+    <span class="tag">RESEARCH / v0.1</span>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div><p class="eyebrow">A SHARED BENCHMARK FOR CORRELATION GENERATORS</p>
+        <h1>Realistic dependence.<br><em>Measurable utility.</em></h1>
+        <p class="intro">From market returns to brain connectivity and spatial weather.
+          Compare what generated matrices preserve—and whether they help with the task.</p>
+        <a class="button" href="#results">Explore the evidence <span>↗</span></a>
+      </div>
+      <div class="matrix-art" aria-label="Illustrative correlation structure, not a dataset result">
+        <div id="matrix" aria-hidden="true"></div>
+        <div class="matrix-caption"><span>DEPENDENCE HAS STRUCTURE</span><span>Illustration / 16 × 16</span></div>
+      </div>
+    </section>
+    <section id="datasets" class="dataset-section">
+      <div class="section-line"><h2>Different domains. Explicit protocols.</h2><span>01 / DATASETS</span></div>
+      <div class="cards">
+        <article class="dataset-card"><span class="domain-icon">↗</span><p class="eyebrow">FINANCE</p><h3>Market returns</h3>
+          <p>Dated Taiwan and Japan return panels, with chronological paper splits and traceable matrix construction.</p>
+          <div class="count">33,080 <span>matrices · 80 assets</span></div>
+          <p class="small">Overlapping windows are dependent. Redistribution review pending.</p>
+          <button class="text-button protocol-link" data-protocol="taiwan_categorical_20261005">View matched protocol →</button></article>
+        <article class="dataset-card"><span class="domain-icon">◎</span><p class="eyebrow">NEUROSCIENCE</p><h3>Brain connectivity</h3>
+          <p>ABIDE regional BOLD series. Named brain regions, whole-subject grouping, and held-out acquisition sites.</p>
+          <div class="count">601 <span>subjects · 111 source labels</span></div>
+          <p class="small">One test-site pilot. Local research; redistribution review pending.</p>
+          <button class="text-button protocol-link" data-protocol="abide_utility_20261005">View augmentation results →</button></article>
+        <article class="dataset-card"><span class="domain-icon">≈</span><p class="eyebrow">WEATHER</p><h3>Spatial temperature</h3>
+          <p>NOAA daily reanalysis. Seasonal anomalies, explicit grid coordinates, and non-overlapping quarterly windows.</p>
+          <div class="count">564 <span>matrices · 44 year groups</span></div>
+          <p class="small">64 grid cells. Dependence-only aggregate-variance baselines.</p>
+          <button class="text-button protocol-link" data-protocol="weather_test_20261005">View spatial baselines →</button></article>
+      </div>
+    </section>
+    <section id="results" class="results-section">
+      <div class="section-line"><h2>Follow the evidence.</h2><span>02 / RESULTS</span></div>
+      <div class="controls"><label for="protocol">Evaluation protocol</label><select id="protocol"></select>
+        <button id="download" class="secondary">Download result records ↓</button></div>
+      <div class="protocol-header"><div><p id="domain" class="eyebrow"></p><h3 id="protocol-title"></h3></div><span id="status" class="status"></span></div>
+      <p id="description" class="description"></p>
+      <div id="finding" class="finding" role="status"></div>
+      <div class="table-scroll"><table><caption id="table-caption" class="sr-only"></caption><thead id="table-head"></thead><tbody id="table-body"></tbody></table></div>
+      <p id="limitations" class="limits"></p>
+      <details class="audit"><summary>Protocol, provenance, and interpretation</summary>
+        <p>Rows are locally audited research results. No independent external review is claimed.
+          A displayed ordering is not a statistical superiority claim. Different protocols are never pooled into one ranking.</p>
+        <p id="protocol-links"></p><p class="hash" id="dataset-hash"></p>
+        <ul id="record-notes"></ul>
+      </details>
+    </section>
+    <section id="reproduce" class="reproduce-section">
+      <div><p class="eyebrow">03 / REPRODUCE & CONTRIBUTE</p><h2>A result should be<br>possible to inspect.</h2>
+        <p>CorrBench versions data construction and evaluation. CorrGAN/cCorrGAN and CorrFlow live in maintained model repositories.
+          Public code, reference datasets and paper links will be released together.</p></div>
+      <div class="steps"><article><span>01</span><div><h3>Start with observations</h3><p>Document the source, estimator, variable identities, independent groups and split.</p></div></article>
+        <article><span>02</span><div><h3>Compare useful baselines</h3><p>Keep replay, simple statistical models, validity, coverage and task utility visible.</p></div></article>
+        <article><span>03</span><div><h3>Submit reproducible evidence</h3><p>Frozen code, dataset hashes, seeds, checkpoints and complete evaluation reports.</p></div></article></div>
+    </section>
+    <aside class="competition"><div><p class="eyebrow">COMMUNITY CHALLENGE / IN DEVELOPMENT</p><h3>A competition for realistic correlation generation.</h3>
+      <p>Kaggle packaging is being prototyped. A protected holdout, audited distributional score and hosted scoring test are required before launch.</p></div><span class="tag">NOT LAUNCHED</span></aside>
+  </main>
+  <footer><strong>CorrBench</strong><span>Validity · Fidelity · Utility</span><span>Private preview. No dataset upload or competition launch.</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>

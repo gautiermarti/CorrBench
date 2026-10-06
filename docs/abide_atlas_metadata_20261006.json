@@ -1,0 +1,12 @@
+{
+  "scope": "Metadata-only atlas limitation annotation; original 601-subject data unchanged",
+  "parquet_bytes_unchanged": true,
+  "parquet_sha256": {
+    "data/validation.parquet": "a8e495c9baa1f12b5cb5a5e0e977f16efff368de490a01b31176732be21c3e26",
+    "data/train.parquet": "d84028264d3d0f8775dbf84f649202c61cfdb2199c670450e0697266a6ad33c2",
+    "data/test.parquet": "e2a99f043f41c760e197395d3a709678cdacea3c93652e2aced4e56b7cd6b164"
+  },
+  "distribution_blocked": true,
+  "uploaded": false,
+  "new_card_sha256": "8a3ba8a5d8f8276a1c4ae893fe0f91511247de2f122f14a317f6225be9dd6487"
+}

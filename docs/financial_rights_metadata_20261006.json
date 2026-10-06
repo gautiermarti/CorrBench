@@ -1,0 +1,54 @@
+{
+  "scope": "Metadata-only refresh; no arrays decoded or science rerun",
+  "prior_metadata_audit_sha256": "7372821711f97c5e063485c54985b80cef0b574ae70829d6aa69a181202a63ca",
+  "full_roundtrip_audit_sha256": "383dd1cd401c78942b0a1140b8c46b8287cf2ce2e3f55e066eb6507bc12b8fce",
+  "configurations": {
+    "finance_taiwan_n80": {
+      "rights_status": "pending",
+      "distribution_blocked": true,
+      "manifest_sha256": "74c2a643c73e25c21b33c87205b097e631e7dfbafcf002c59e026ad471c56e21",
+      "card_sha256": "c9549f9854ec5162453d060c922c8f404a0678a414cb3b42fe033a465c76a665",
+      "splits": {
+        "test": {
+          "rows": 6888,
+          "parquet_sha256": "53c21c2d5d0e47b38906b5d8c4a1fad4867b3e3e60686ae06872c4dfbed15917",
+          "unchanged_from_full_array_audit": true
+        },
+        "train": {
+          "rows": 13600,
+          "parquet_sha256": "6ca6d1b3ec32c65c02a1d8bcc18e259ad086177e134630a315f84bd37908ae02",
+          "unchanged_from_full_array_audit": true
+        },
+        "validation": {
+          "rows": 3920,
+          "parquet_sha256": "1a0b9bb00e2bc4fc77d97b9ba3099494379e6ddc86b4397a901ca83c632ec52f",
+          "unchanged_from_full_array_audit": true
+        }
+      }
+    },
+    "finance_japan_n80": {
+      "rights_status": "restricted",
+      "distribution_blocked": true,
+      "manifest_sha256": "fef125bbd6dd0fec0988be656997661349c0895b6d8c7e9cfceec4c97cd7adb4",
+      "card_sha256": "cb3f5846d70754044cbac03bffe5e5c79f8df971ee0ad6469697b91c7db93ecf",
+      "splits": {
+        "test": {
+          "rows": 2888,
+          "parquet_sha256": "0f5016ed7ecdecf779ebc16c94fc36d12032b46f79d3f7b4e81856e3d87e661d",
+          "unchanged_from_full_array_audit": true
+        },
+        "train": {
+          "rows": 3848,
+          "parquet_sha256": "580664121d9ae3267fb708b109fe9e323b0a9e24d798f37402f0cc1e011f99ae",
+          "unchanged_from_full_array_audit": true
+        },
+        "validation": {
+          "rows": 1936,
+          "parquet_sha256": "a895c5bcf53bb6ccfcf98f158e61fc0704e981b8f2c77f16b91542e8f6bc498d",
+          "unchanged_from_full_array_audit": true
+        }
+      }
+    }
+  },
+  "total_rows": 33080
+}

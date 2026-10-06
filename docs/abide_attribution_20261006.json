@@ -1,0 +1,422 @@
+{
+  "schema": "corrbench.abide-attribution.v1",
+  "date": "2026-10-06",
+  "rights_clearance": false,
+  "source_terms": {
+    "retrieved_utc": "2026-10-06T07:49:57.345902+00:00",
+    "sources": {
+      "abide_i.html": {
+        "url": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+        "resolved_url": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+        "http_status": 200,
+        "sha256": "4afbcdb77dfb5b6d328126835782fe124274a532ffec2c544b1aa255463d70aa",
+        "bytes": 208797,
+        "tls_hostname_verified": false,
+        "reason": "Public unauthenticated source has hostname-mismatched TLS certificate; content/terms independently retrieved by web tool",
+        "initial_failure": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'fcon_1000.projects.nitrc.org'. (_ssl.c:1000)>"
+      },
+      "abide_preprocessed.html": {
+        "url": "https://fcon_1000.projects.nitrc.org/indi/abide/preprocessed.html",
+        "resolved_url": "https://fcon_1000.projects.nitrc.org/indi/abide/preprocessed.html",
+        "http_status": 200,
+        "sha256": "7b2afb6ff82c7e34d41910db90ed8b1c959684988b1444f86e148f4b5cf3cfa9",
+        "bytes": 5035,
+        "tls_hostname_verified": false,
+        "reason": "Public unauthenticated source has hostname-mismatched TLS certificate; content/terms independently retrieved by web tool",
+        "initial_failure": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'fcon_1000.projects.nitrc.org'. (_ssl.c:1000)>"
+      },
+      "cc_by_nc_sa_3_legalcode.html": {
+        "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/legalcode",
+        "error": "HTTP Error 403: Forbidden"
+      },
+      "pcp_overview.html": {
+        "url": "https://raw.githubusercontent.com/preprocessed-connectomes-project/abide/21dae10aaf2b6d576e9f9eee29e48ea6a875daed/index.html",
+        "resolved_url": "https://raw.githubusercontent.com/preprocessed-connectomes-project/abide/21dae10aaf2b6d576e9f9eee29e48ea6a875daed/index.html",
+        "http_status": 200,
+        "sha256": "90a83d6fbcd506af48adf0fdb2bf8f05c219f147ac7bf95dc831c94dc62560b6",
+        "bytes": 9276
+      },
+      "pcp_download_guide.txt": {
+        "url": "https://raw.githubusercontent.com/preprocessed-connectomes-project/abide/fda1ec5d3f53eb97d94352e779f37c3ce46caee1/download_abide_preproc_guide.txt",
+        "resolved_url": "https://raw.githubusercontent.com/preprocessed-connectomes-project/abide/fda1ec5d3f53eb97d94352e779f37c3ce46caee1/download_abide_preproc_guide.txt",
+        "http_status": 200,
+        "sha256": "4bc14448cb90a6f72b1b69bcc248445d1d685a2ade1d190008df9c3ecc982527",
+        "bytes": 3068
+      },
+      "fsl_license.html": {
+        "url": "https://fsl.fmrib.ox.ac.uk/fsl/docs/license.html",
+        "resolved_url": "https://fsl.fmrib.ox.ac.uk/fsl/docs/license.html",
+        "http_status": 200,
+        "sha256": "1260bd30fdff9fe1e750a76a7cb1b1129ea549cba9ae55fed021ad6bb9b08742",
+        "bytes": 95772
+      },
+      "fsl_atlases.html": {
+        "url": "https://fsl.fmrib.ox.ac.uk/fsl/docs/other/datasets.html",
+        "resolved_url": "https://fsl.fmrib.ox.ac.uk/fsl/docs/other/datasets.html",
+        "http_status": 200,
+        "sha256": "c327871fb9a1f77f795fd077e35c463e8ee5aeb0ab1c91c5cd4bf7f24d4122e0",
+        "bytes": 107681
+      }
+    }
+  },
+  "cohorts": {
+    "original111": {
+      "subjects": 601,
+      "manifest_sha256": "a95b7a365da2982d90fcd2f75a5f8a17c5ed5a7a0385ae9e1c5cd7e2bc015467",
+      "splits": {
+        "train": {
+          "subjects": 349,
+          "sites": {
+            "CALTECH": 1,
+            "KKI": 26,
+            "LEUVEN_1": 20,
+            "LEUVEN_2": 25,
+            "MAX_MUN": 19,
+            "OHSU": 14,
+            "OLIN": 15,
+            "PITT": 31,
+            "SBL": 21,
+            "SDSU": 6,
+            "STANFORD": 23,
+            "TRINITY": 18,
+            "UCLA_1": 46,
+            "UCLA_2": 14,
+            "USM": 44,
+            "YALE": 26
+          },
+          "npz_sha256": "e22f6dfcf4ba6bbf0f014adf12564903790534e02c76b9c7c51565a5f62b05b9"
+        },
+        "validation": {
+          "subjects": 92,
+          "sites": {
+            "UM_1": 63,
+            "UM_2": 29
+          },
+          "npz_sha256": "68801342b7c8e86b26baf2bc13da7823037c384d2d0068c034bb04fe300126ff"
+        },
+        "test": {
+          "subjects": 160,
+          "sites": {
+            "NYU": 160
+          },
+          "npz_sha256": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47"
+        }
+      }
+    },
+    "named110_same601": {
+      "subjects": 601,
+      "manifest_sha256": "7dabe159073424b4cd6fd4b4c241c1abb97d0191224e6f999d00b60ca4944578",
+      "splits": {
+        "train": {
+          "subjects": 349,
+          "sites": {
+            "CALTECH": 1,
+            "KKI": 26,
+            "LEUVEN_1": 20,
+            "LEUVEN_2": 25,
+            "MAX_MUN": 19,
+            "OHSU": 14,
+            "OLIN": 15,
+            "PITT": 31,
+            "SBL": 21,
+            "SDSU": 6,
+            "STANFORD": 23,
+            "TRINITY": 18,
+            "UCLA_1": 46,
+            "UCLA_2": 14,
+            "USM": 44,
+            "YALE": 26
+          },
+          "npz_sha256": "2740bf93371ea54c9936fae81141de7363b9108fc74630d5dff1536beb3b8a1d"
+        },
+        "validation": {
+          "subjects": 92,
+          "sites": {
+            "UM_1": 63,
+            "UM_2": 29
+          },
+          "npz_sha256": "1b70d87243b89ba2701a536f82c39171d9b6dbac3de4e2241e2d2d122c3361ba"
+        },
+        "test": {
+          "subjects": 160,
+          "sites": {
+            "NYU": 160
+          },
+          "npz_sha256": "b284b20abc9b3c632e5f7a8414433e1ea29ccbbbf712d11fb69733169dad93b9"
+        }
+      }
+    },
+    "named110_expanded762": {
+      "subjects": 762,
+      "manifest_sha256": "5147207c93c432789993b28acd303f736456a431ccf947b6fc88a57e198a3028",
+      "splits": {
+        "train": {
+          "subjects": 488,
+          "sites": {
+            "CALTECH": 11,
+            "CMU": 1,
+            "KKI": 29,
+            "LEUVEN_1": 28,
+            "LEUVEN_2": 26,
+            "MAX_MUN": 40,
+            "OHSU": 22,
+            "OLIN": 22,
+            "PITT": 41,
+            "SBL": 22,
+            "SDSU": 20,
+            "STANFORD": 24,
+            "TRINITY": 41,
+            "UCLA_1": 52,
+            "UCLA_2": 15,
+            "USM": 59,
+            "YALE": 35
+          },
+          "npz_sha256": "ceb53862366d6fbc581e59cf80d1fcaa83b30c66b3c6e08ef84b7d8e5874b0d8"
+        },
+        "validation": {
+          "subjects": 108,
+          "sites": {
+            "UM_1": 77,
+            "UM_2": 31
+          },
+          "npz_sha256": "3108e1df0065e09c9cb4b415ff404ce2ca217c74fde79f954ab610f022e7c8c5"
+        },
+        "test": {
+          "subjects": 166,
+          "sites": {
+            "NYU": 166
+          },
+          "npz_sha256": "e54f20edb08c939ca8ac738eaedc159d0aac0bce810f5b2978af984723cf7270"
+        }
+      }
+    }
+  },
+  "sites": {
+    "CALTECH": {
+      "institution": "California Institute of Technology",
+      "investigators": "Daniel P. Kennedy, Ph.D., J. Michael Tyszka, Ph.D., Ralph Adolphs, Ph.D.",
+      "funding_as_published": "Simons Foundation (SFARI-07-01 to R.A.) National Institute of Mental Health (R01 MH080721 to R.A.)",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 1,
+        "named110_same601": 1,
+        "named110_expanded762": 11
+      }
+    },
+    "CMU": {
+      "institution": "Carnegie Mellon University",
+      "investigators": "Marlene Behrmann, Ph.D., Ilan Dinstein, Ph.D., Nancy Minshew, M.D.",
+      "funding_as_published": "NICHD/NIDCD PO1/U19 to M. B. (PI: Nancy Minshew), which is part of the NICHD/NIDCD Collaborative Programs for Excellence in Autism Simons Foundation to M. B. (PI: David Heeger)",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 0,
+        "named110_same601": 0,
+        "named110_expanded762": 1
+      }
+    },
+    "KKI": {
+      "institution": "Kennedy Krieger Institute",
+      "investigators": "Stewart H. Mostofsky, M.D., Mary Beth Nebel, Ph.D.",
+      "funding_as_published": "Autism Speaks Foundation (Mostofsky) National Institute of Neurological Disorders and Stroke: R01 NS048527 (Mostofsky)",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 26,
+        "named110_same601": 26,
+        "named110_expanded762": 29
+      }
+    },
+    "MAX_MUN": {
+      "institution": "Ludwig Maximilians University Munich",
+      "investigators": "Sophia Mueller, M.D., Birgit Ertl-Wagner, M.D., Kristina Hennig-Fast, Michele Noterdaeme, M.D.",
+      "funding_as_published": "None",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 19,
+        "named110_same601": 19,
+        "named110_expanded762": 40
+      }
+    },
+    "NYU": {
+      "institution": "NYU Langone Medical Center",
+      "investigators": "Adriana Di Martino, M.D., F. Xavier Castellanos, M.D., Michael P. Milham, M.D., Ph.D., Clare Kelly, Ph.D.",
+      "funding_as_published": "NIH (K23MH087770; R21MH084126; R01MH081218; R01HD065282) Autism Speaks The Stavros Niarchos Foundation The Leon Levy Foundation An endowment provided by Phyllis Green and Randolph Co̅wen",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 160,
+        "named110_same601": 160,
+        "named110_expanded762": 166
+      }
+    },
+    "OLIN": {
+      "institution": "Olin, Institute of Living at Hartford Hospital",
+      "investigators": "Michal Assaf, M.D.",
+      "funding_as_published": "Autism Speaks (to M.A.). Hartford Hospital (to M.A)",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 15,
+        "named110_same601": 15,
+        "named110_expanded762": 22
+      }
+    },
+    "OHSU": {
+      "institution": "Oregon Health and Science University",
+      "investigators": "Damien Fair, PA-C, Ph.D., Joel Nigg, Ph.D.",
+      "funding_as_published": "R00 MH091238 (Fair) R01 MH096773 (Fair) R01 MH086654 (Nigg) Simon Foundation, Inc. (Nigg)",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 14,
+        "named110_same601": 14,
+        "named110_expanded762": 22
+      }
+    },
+    "SDSU": {
+      "institution": "San Diego State University",
+      "investigators": "Ralph-Axel Müller, Ph.D., Christopher Keown, B.S.",
+      "funding_as_published": "NIH R01-MH081023 (PI: Müller)",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 6,
+        "named110_same601": 6,
+        "named110_expanded762": 20
+      }
+    },
+    "SBL": {
+      "institution": "Social Brain Lab BCN NIC UMC Groningen and Netherlands Institute for Neurosciences",
+      "investigators": "Marc Thioux, Ph.D., Leonardo Cerliani, Ph.D., Christian Keysers, Ph.D.",
+      "funding_as_published": "Nederlandse Organisatie voor Wetenschappelijk Onderzoek (NWO) Cognitive Pilot Project (051.07.003) NWO VIDI (452-04-305) NWO Open Competition (400-08-089) European Commission, Marie Curie Excellence Grant (MEXT-CT-2005-023253) National Initiative for Brain and Cognition NIHC HCMI Functional Markers (056-13-014) National Initiative for Brain and Cognition NIHC HCMI Simulation and TOM (056-13-017) Netherlands Brain Foundation (KS 2010(1)-29)",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 21,
+        "named110_same601": 21,
+        "named110_expanded762": 22
+      }
+    },
+    "STANFORD": {
+      "institution": "Stanford University",
+      "investigators": "Lucina Uddin, Ph.D., Kaustubh Supekar, Ph.D., Vinod Menon, Ph.D.",
+      "funding_as_published": "National Institute of Mental Health Career Development Award [K01MH092288] to L.U. Stanford Institute for Neuro-Innovation & Translational Neurosciences National Institutes of Health [DC011095, MH084164] to V.M.",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 23,
+        "named110_same601": 23,
+        "named110_expanded762": 24
+      }
+    },
+    "TRINITY": {
+      "institution": "Trinity Centre for Health Sciences",
+      "investigators": "Louise Gallagher, MB, MRCPsych, Ph.D., Sonja Delmonte, Joshua Balsters, Ph.D.",
+      "funding_as_published": "The Meath Foundation, Adelaide and Meath Hospital, incorporating the National Children's Hospital (AMNCH), Tallaght, and travel fellowship by the Kyulan Family Foundation.",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 18,
+        "named110_same601": 18,
+        "named110_expanded762": 41
+      }
+    },
+    "UCLA_1": {
+      "institution": "University of California, Los Angeles: Sample 1",
+      "investigators": "Mirella Dapretto, Ph.D., Susan Bookheimer, Ph.D., Jeffrey D. Rudie",
+      "funding_as_published": "UCLA Autism Center of Excellence NICHD P50 HD055784 NIMH 1R01 HD065280-01",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 46,
+        "named110_same601": 46,
+        "named110_expanded762": 52
+      }
+    },
+    "UCLA_2": {
+      "institution": "University of California, Los Angeles: Sample 2",
+      "investigators": "Susan Y. Bookheimer, Ph.D., Mirella Dapretto, Ph.D., Jeffrey D. Rudie",
+      "funding_as_published": "UCLA Autism Center of Excellence NICHD P50 HD055784 NIMH 1R01 HD065280-01",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 14,
+        "named110_same601": 14,
+        "named110_expanded762": 15
+      }
+    },
+    "LEUVEN_1": {
+      "institution": "University of Leuven: Sample 1",
+      "investigators": "Kaat Alaerts, Ph.D., Nicole Wenderoth, Ph.D.",
+      "funding_as_published": "Flanders Fund for Scientific Research (FWO projects G.0758.10) FWO postdoctoral Research fellowship grant (KA) Grant P6/29 from the Interuniversity Attraction Poles program of the Belgian federal government. This study has been conducted in collaboration with the Leuven Autism Research Consortium (LAuRes), funded by the Research Council of the University of Leuven (IDO/08/013).",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 20,
+        "named110_same601": 20,
+        "named110_expanded762": 28
+      }
+    },
+    "LEUVEN_2": {
+      "institution": "University of Leuven: Sample 2",
+      "investigators": "Stefan Sunaert, M.D., Ph.D., Judith Verhoeven",
+      "funding_as_published": "Fund for Scientific Research-Flanders (F.W.O.) (research grant G.0354.06, doctoral mandate to Judith Verhoeven, research grant 1841313N, senior clinical investigator grant to Stefan Sunaert) Belgian Inter University Attraction Pole (grant 6/29) KU Leuven Research Council (grant IDO/08/013)",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 25,
+        "named110_same601": 25,
+        "named110_expanded762": 26
+      }
+    },
+    "UM_1": {
+      "institution": "University of Michigan: Sample 1",
+      "investigators": "Christopher S. Monk, Ph.D., Jillian Lee Wiggins, M.S., Scott Peltier, Ph.D., Catherine Lord, Ph.D.",
+      "funding_as_published": "Autism Speaks (CSM) NIH U19 HD035482 and NIH MH066496 (CL) Autism Speaks Pre-doctoral Fellowship 4773 (JLW) Michigan Institute for Clinical and Health Research (MICHR) Pre-doctoral Fellowship UL1RR024986 (JLW) NIH R21 MH079871 (SP)",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 63,
+        "named110_same601": 63,
+        "named110_expanded762": 77
+      }
+    },
+    "UM_2": {
+      "institution": "University of Michigan: Sample 2",
+      "investigators": "Scott Peltier, Ph.D., Catherine Lord, Ph.D., Christopher S. Monk, Ph.D., Jillian Lee Wiggins, M.S., Susan Risi, Ph.D., Opal Ousley, Ph.D.",
+      "funding_as_published": "Autism Speaks (CM) NIH U19 HD035482 and MH066496 (CL) Autism Speaks Pre-doctoral Fellowship 4773 (JW) Michigan Institute for Clinical and Health Research (MICHR) Pre-doctoral Fellowship UL1RR024986 (JW) NIH R21 MH079871 (SP)",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 29,
+        "named110_same601": 29,
+        "named110_expanded762": 31
+      }
+    },
+    "PITT": {
+      "institution": "University of Pittsburgh School of Medicine",
+      "investigators": "Beatriz Luna, Ph.D., Kirsten O'Hearn, Ph.D.",
+      "funding_as_published": "Autism Speaks Grant 04593 (BL) KO1 NIMH MH081191 (KO) NIMH MH67924 (BL) NIH HD55748 (NM)",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 31,
+        "named110_same601": 31,
+        "named110_expanded762": 41
+      }
+    },
+    "USM": {
+      "institution": "University of Utah School of Medicine",
+      "investigators": "Jeffrey S. Anderson, M.D., Ph.D., Jared A. Nielsen, B.S., Alyson L. Froehlich, Ph.D., Molly B. DuBray, M.A., Michael A. Ferguson, Ph.D., T. Jason Druzgal, M.D., Ph.D., Annahir N. Cariello, Jason R. Cooperrider, B.S., Brandon A. Zielinski, M.D., Ph.D., Caitlin Ravichandran, Ph.D., P. Thomas Fletcher, Ph.D., Andrew L. Alexander, Ph.D., Erin D. Bigler, Ph.D., Nicholas Lange, Sc.D., Janet E. Lainhart, M.D.",
+      "funding_as_published": "National Institutes of Health (grant numbers: K08 MH092697, RO1MH080826, P50MH60450, T32DC008553, R01NS34783) Autism Speaks Mentor-based Predoctoral Fellowship (grant number: 1677) University of Utah Multidisciplinary Research Seed Grant NRSA Predoctoral Fellowship (grant number: F31 DC010143) Ben B. and Iris M. Margolis Foundation",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 44,
+        "named110_same601": 44,
+        "named110_expanded762": 59
+      }
+    },
+    "YALE": {
+      "institution": "Yale Child Study Center",
+      "investigators": "Ben Deen, Kevin Pelphrey, Ph.D.",
+      "funding_as_published": "Simons Foundation (KP) Autism Speaks (KP) John Merck Scholars Fund (KP) Autism Science Foundation NICHD (KP) NIMH",
+      "source": "https://fcon_1000.projects.nitrc.org/indi/abide/abide_I.html",
+      "cohort_counts": {
+        "original111": 26,
+        "named110_same601": 26,
+        "named110_expanded762": 35
+      }
+    }
+  },
+  "limits": [
+    "The cohorts overlap; their counts must not be added as independent subjects",
+    "Attribution completion does not settle derivative license scope",
+    "Funding strings preserve source spellings and grant identifiers",
+    "No raw images, atlas images or regional time series are distributed here"
+  ]
+}

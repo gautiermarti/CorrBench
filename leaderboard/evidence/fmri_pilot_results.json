@@ -1,0 +1,203 @@
+{
+  "scope": "One generator training seed and one test site; five generation seeds",
+  "uncertainty": "SD across generation draws; paired bootstrap CI over test subjects conditional on fitted models/site, unadjusted for multiple comparisons",
+  "reference": {
+    "name": "real_only",
+    "C": 0.001,
+    "roc_auc": 0.7653968253968254,
+    "balanced_accuracy": 0.7015873015873015,
+    "paired_difference_95pct": {
+      "roc_auc": [
+        0.0,
+        0.0
+      ],
+      "balanced_accuracy": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "methods": [
+    {
+      "method": "replay",
+      "label": "Training replay",
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "auc_mean": 0.7471746031746032,
+      "auc_generation_sd": 0.005375072875340213,
+      "balanced_accuracy_mean": 0.6788888888888889,
+      "balanced_accuracy_generation_sd": 0.018050976220260466,
+      "auc_difference": -0.01822222222222225,
+      "auc_difference_paired_subject_95pct": [
+        -0.03159206349206351,
+        -0.005201587301587203
+      ],
+      "structure_swd_mean": 0.4665740758180618,
+      "roi_swd_mean": 0.3431529104709625,
+      "valid_fraction": 1.0
+    },
+    {
+      "method": "gaussian",
+      "label": "Transformed Gaussian",
+      "training_seeds": 0,
+      "generation_seeds": 5,
+      "auc_mean": 0.7539365079365079,
+      "auc_generation_sd": 0.007627640656875852,
+      "balanced_accuracy_mean": 0.6982539682539682,
+      "balanced_accuracy_generation_sd": 0.013261332428066888,
+      "auc_difference": -0.011460317460317504,
+      "auc_difference_paired_subject_95pct": [
+        -0.03143015873015877,
+        0.007653968253968393
+      ],
+      "structure_swd_mean": 1.1736956596374513,
+      "roi_swd_mean": 0.3796392887830734,
+      "valid_fraction": 1.0
+    },
+    {
+      "method": "diffeocfm",
+      "label": "DiffeoCFM selected",
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "auc_mean": 0.7441269841269842,
+      "auc_generation_sd": 0.014085457066813762,
+      "balanced_accuracy_mean": 0.6715873015873016,
+      "balanced_accuracy_generation_sd": 0.013009580360409143,
+      "auc_difference": -0.021269841269841216,
+      "auc_difference_paired_subject_95pct": [
+        -0.04216269841269854,
+        -0.0007587301587302504
+      ],
+      "structure_swd_mean": 1.2188234686851502,
+      "roi_swd_mean": 0.3532957524061203,
+      "valid_fraction": 1.0
+    },
+    {
+      "method": "diffeocfm_last",
+      "label": "DiffeoCFM final",
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "auc_mean": 0.7397142857142858,
+      "auc_generation_sd": 0.007278604270115108,
+      "balanced_accuracy_mean": 0.6738095238095239,
+      "balanced_accuracy_generation_sd": 0.014826620390690007,
+      "auc_difference": -0.02568253968253964,
+      "auc_difference_paired_subject_95pct": [
+        -0.04768412698412696,
+        -0.0034761904761904387
+      ],
+      "structure_swd_mean": 1.3488541007041932,
+      "roi_swd_mean": 0.3328568547964096,
+      "valid_fraction": 1.0
+    },
+    {
+      "method": "nodeflow",
+      "label": "Node-aware CorrFlow pilot",
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "auc_mean": 0.7573333333333333,
+      "auc_generation_sd": 0.017839815226246773,
+      "balanced_accuracy_mean": 0.6888888888888889,
+      "balanced_accuracy_generation_sd": 0.030758448214406507,
+      "auc_difference": -0.008063492063492106,
+      "auc_difference_paired_subject_95pct": [
+        -0.04346269841269848,
+        0.02679841269841271
+      ],
+      "structure_swd_mean": 0.9662230849266052,
+      "roi_swd_mean": 0.3933818399906158,
+      "valid_fraction": 1.0
+    },
+    {
+      "method": "anonymous_flow",
+      "label": "Anonymous CorrFlow pilot",
+      "training_seeds": 1,
+      "generation_seeds": 5,
+      "auc_mean": 0.7628253968253969,
+      "auc_generation_sd": 0.016702305056640807,
+      "balanced_accuracy_mean": 0.7036507936507936,
+      "balanced_accuracy_generation_sd": 0.022855213763391447,
+      "auc_difference": -0.002571428571428558,
+      "auc_difference_paired_subject_95pct": [
+        -0.0387857142857143,
+        0.032798412698412716
+      ],
+      "structure_swd_mean": 1.008151078224182,
+      "roi_swd_mean": 0.75248202085495,
+      "valid_fraction": 1.0
+    }
+  ],
+  "synthetic_only": [
+    {
+      "name": "gaussian_synthetic_only_2027",
+      "C": 10.0,
+      "roc_auc": 0.7431746031746033,
+      "balanced_accuracy": 0.6238095238095238,
+      "paired_difference_95pct": {
+        "roc_auc": [
+          -0.07541269841269836,
+          0.033515873015872964
+        ],
+        "balanced_accuracy": [
+          -0.1468650793650794,
+          -0.006329365079365075
+        ]
+      }
+    },
+    {
+      "name": "diffeocfm_synthetic_only_2027",
+      "C": 0.001,
+      "roc_auc": 0.6973015873015873,
+      "balanced_accuracy": 0.6222222222222222,
+      "paired_difference_95pct": {
+        "roc_auc": [
+          -0.12782142857142867,
+          -0.006646825396825347
+        ],
+        "balanced_accuracy": [
+          -0.1611111111111111,
+          -0.0015674603174603298
+        ]
+      }
+    },
+    {
+      "name": "nodeflow_synthetic_only_2027",
+      "C": 0.1,
+      "roc_auc": 0.5519047619047619,
+      "balanced_accuracy": 0.5666666666666667,
+      "paired_difference_95pct": {
+        "roc_auc": [
+          -0.32286507936507935,
+          -0.09236904761904759
+        ],
+        "balanced_accuracy": [
+          -0.2373015873015873,
+          -0.03331349206349207
+        ]
+      }
+    },
+    {
+      "name": "anonymous_flow_synthetic_only_2027",
+      "C": 1.0,
+      "roc_auc": 0.476984126984127,
+      "balanced_accuracy": 0.5357142857142857,
+      "paired_difference_95pct": {
+        "roc_auc": [
+          -0.4121031746031747,
+          -0.16110714285714273
+        ],
+        "balanced_accuracy": [
+          -0.271468253968254,
+          -0.04998015873015869
+        ]
+      }
+    }
+  ],
+  "sources": {
+    "selection.json": "b1a6779a39d81c815b0158cfa7a1b81077f60ddcd334ea5a93aa0f34ced215c3",
+    "test_report.json": "27bd3d1231d1d764957b8e0dfaa4c28b2cd5da422922b9c4b13cc59bc6e380b1",
+    "test_predictions.npz": "1128e53ccac81dab53b763e07ce05942e6a0a585c27f74b755f9c64223353335",
+    "diagnostics.json": "314168bb6a146b1c3bd4b5516a35860868e940c27ad3af4b9bb7801499e267ff",
+    "input_audit.json": "891a6ecc4270b3a2baf11f3ca08f0685f0a81d5c865c71eeceba9c2fc13eefad"
+  }
+}

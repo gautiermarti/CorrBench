@@ -1,0 +1,250 @@
+{
+  "taiwan": {
+    "status": "passed",
+    "market": "taiwan_final_sample_holdout",
+    "scope": "Construction diagnostic on inspected paper periods; no new holdout",
+    "source_sha256": "d13a5fa92abe105d069eda1f6669111e84f13b40d637d4b78378a8dacaa43cfd",
+    "split_sha256": {
+      "train": "a266c9449f2297d7d777313607e5748a20066554d5dd1e27462a7bae8ef48d65",
+      "validation": "a4efa7c3a54e134150d9e67945a0750429202c9b8ca5e705e4cc9aae248fdd58",
+      "test": "6966f1e712819d506e2eb6904380439f7cbadbc0c5ca1f2ec030a1d129b28a37"
+    },
+    "manifest_sha256": "4c1835dcd08c05e762a40fc9afe02bcfd287aec58ec8b4a7b91b9a830ff6d377",
+    "code_sha256": "82016a956e22b6dc4b873996dc8be2c46d2bfcc0886401376feeed818a75e60d",
+    "lookback_sessions": 252,
+    "views": {
+      "original": {
+        "splits": {
+          "train": {
+            "matrices": 13600,
+            "parent_windows": 1700,
+            "return_sessions": 1951,
+            "first_return_date": "2013-01-02T00:00:00.000000000",
+            "last_return_date": "2020-12-31T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": false
+          },
+          "validation": {
+            "matrices": 3920,
+            "parent_windows": 490,
+            "return_sessions": 741,
+            "first_return_date": "2019-12-24T00:00:00.000000000",
+            "last_return_date": "2022-12-30T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": false
+          },
+          "test": {
+            "matrices": 6888,
+            "parent_windows": 861,
+            "return_sessions": 1112,
+            "first_return_date": "2021-12-24T00:00:00.000000000",
+            "last_return_date": "2026-07-30T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": false
+          }
+        },
+        "shared_return_sessions": {
+          "train__validation": 251,
+          "train__test": 0,
+          "validation__test": 251
+        },
+        "all_splits_nonempty": true
+      },
+      "boundary_purged": {
+        "splits": {
+          "train": {
+            "matrices": 13600,
+            "parent_windows": 1700,
+            "return_sessions": 1951,
+            "first_return_date": "2013-01-02T00:00:00.000000000",
+            "last_return_date": "2020-12-31T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": false
+          },
+          "validation": {
+            "matrices": 1912,
+            "parent_windows": 239,
+            "return_sessions": 490,
+            "first_return_date": "2021-01-04T00:00:00.000000000",
+            "last_return_date": "2022-12-30T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": false
+          },
+          "test": {
+            "matrices": 4880,
+            "parent_windows": 610,
+            "return_sessions": 861,
+            "first_return_date": "2023-01-03T00:00:00.000000000",
+            "last_return_date": "2026-07-30T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": false
+          }
+        },
+        "shared_return_sessions": {
+          "train__validation": 0,
+          "train__test": 0,
+          "validation__test": 0
+        },
+        "all_splits_nonempty": true
+      },
+      "disjoint_blocks": {
+        "splits": {
+          "train": {
+            "matrices": 56,
+            "parent_windows": 7,
+            "return_sessions": 1764,
+            "first_return_date": "2013-01-02T00:00:00.000000000",
+            "last_return_date": "2020-04-06T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": true
+          },
+          "validation": {
+            "matrices": 8,
+            "parent_windows": 1,
+            "return_sessions": 252,
+            "first_return_date": "2021-01-04T00:00:00.000000000",
+            "last_return_date": "2022-01-12T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": true
+          },
+          "test": {
+            "matrices": 24,
+            "parent_windows": 3,
+            "return_sessions": 756,
+            "first_return_date": "2023-01-03T00:00:00.000000000",
+            "last_return_date": "2026-02-25T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": true
+          }
+        },
+        "shared_return_sessions": {
+          "train__validation": 0,
+          "train__test": 0,
+          "validation__test": 0
+        },
+        "all_splits_nonempty": true
+      }
+    },
+    "indices_sha256": {
+      "boundary_purged_indices.npz": "0b2a6f30317949421106114ea40c0ba4b503136685f2213481dd79ae419ecc6e",
+      "disjoint_blocks_indices.npz": "70f8a065bd9befa8904a535693b9d63522a7064a7ba0bba8097df6190b8c43a8",
+      "original_indices.npz": "c4f472e206c0d4e5d4f755fdad5d3a33bd0af4e5f28c91628b111e26dca0c9cf"
+    },
+    "limits": "Date-disjoint observations are not independent market regimes. Asset subsets at one parent window still share returns. Empty validation requires redesigning dates, not silently retaining overlapping rows. These indices preserve paper labels; no new training/calibration is claimed."
+  },
+  "japan": {
+    "status": "passed",
+    "market": "japan_jpx_chronological",
+    "scope": "Construction diagnostic on inspected paper periods; no new holdout",
+    "source_sha256": "ea7728113228da52794538c0b53bf97e8b5d999a472360f96ce6ed642bd8e2d1",
+    "split_sha256": {
+      "train": "e6b8441dddca45279a041a1b1c7f9c696f50126ded1a63d42df661896773ca7f",
+      "validation": "a2f73bce2854a5b1c489cd53ebc5c02201d2c0e3df25815abb75b71b012182cd",
+      "test": "a97317addc95a7ad358021bc710d2ab4be92bc169b6699560c178996c585c5e8"
+    },
+    "manifest_sha256": "c76a274cb397441f27e5f55a9020998219912581ab884c417c65e2457ae86126",
+    "code_sha256": "82016a956e22b6dc4b873996dc8be2c46d2bfcc0886401376feeed818a75e60d",
+    "lookback_sessions": 252,
+    "views": {
+      "original": {
+        "splits": {
+          "train": {
+            "matrices": 3848,
+            "parent_windows": 481,
+            "return_sessions": 732,
+            "first_return_date": "2017-01-05T00:00:00.000000000",
+            "last_return_date": "2019-12-30T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": false
+          },
+          "validation": {
+            "matrices": 1936,
+            "parent_windows": 242,
+            "return_sessions": 493,
+            "first_return_date": "2018-12-14T00:00:00.000000000",
+            "last_return_date": "2020-12-30T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": false
+          },
+          "test": {
+            "matrices": 2888,
+            "parent_windows": 361,
+            "return_sessions": 612,
+            "first_return_date": "2019-12-18T00:00:00.000000000",
+            "last_return_date": "2022-06-24T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": false
+          }
+        },
+        "shared_return_sessions": {
+          "train__validation": 251,
+          "train__test": 9,
+          "validation__test": 251
+        },
+        "all_splits_nonempty": true
+      },
+      "boundary_purged": {
+        "splits": {
+          "train": {
+            "matrices": 3848,
+            "parent_windows": 481,
+            "return_sessions": 732,
+            "first_return_date": "2017-01-05T00:00:00.000000000",
+            "last_return_date": "2019-12-30T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": false
+          },
+          "validation": {
+            "matrices": 0,
+            "parent_windows": 0,
+            "return_sessions": 0,
+            "first_return_date": null,
+            "last_return_date": null,
+            "within_split_parent_windows_disjoint": true
+          },
+          "test": {
+            "matrices": 880,
+            "parent_windows": 110,
+            "return_sessions": 361,
+            "first_return_date": "2021-01-04T00:00:00.000000000",
+            "last_return_date": "2022-06-24T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": false
+          }
+        },
+        "shared_return_sessions": {
+          "train__validation": 0,
+          "train__test": 0,
+          "validation__test": 0
+        },
+        "all_splits_nonempty": false
+      },
+      "disjoint_blocks": {
+        "splits": {
+          "train": {
+            "matrices": 16,
+            "parent_windows": 2,
+            "return_sessions": 504,
+            "first_return_date": "2017-01-05T00:00:00.000000000",
+            "last_return_date": "2019-01-23T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": true
+          },
+          "validation": {
+            "matrices": 0,
+            "parent_windows": 0,
+            "return_sessions": 0,
+            "first_return_date": null,
+            "last_return_date": null,
+            "within_split_parent_windows_disjoint": true
+          },
+          "test": {
+            "matrices": 8,
+            "parent_windows": 1,
+            "return_sessions": 252,
+            "first_return_date": "2021-01-04T00:00:00.000000000",
+            "last_return_date": "2022-01-13T00:00:00.000000000",
+            "within_split_parent_windows_disjoint": true
+          }
+        },
+        "shared_return_sessions": {
+          "train__validation": 0,
+          "train__test": 0,
+          "validation__test": 0
+        },
+        "all_splits_nonempty": false
+      }
+    },
+    "indices_sha256": {
+      "boundary_purged_indices.npz": "79dd83fce855aee25573144a459f82ab886c641d2192d9983d4d0a11dcf99766",
+      "disjoint_blocks_indices.npz": "4305d5462c5a81307387105d44e609d24f55e0792884e44320d3949cb3386c25",
+      "original_indices.npz": "e3aeafc2bc479fd1c2448cc61ce43d90efa463859d13313b1e8f88552f4146e1"
+    },
+    "limits": "Date-disjoint observations are not independent market regimes. Asset subsets at one parent window still share returns. Empty validation requires redesigning dates, not silently retaining overlapping rows. These indices preserve paper labels; no new training/calibration is claimed."
+  }
+}

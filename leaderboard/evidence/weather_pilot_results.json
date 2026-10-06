@@ -1,0 +1,173 @@
+{
+  "scope": "Dependence-only spatial aggregate variance; not a weather forecast",
+  "main_metric": "1-Wasserstein to empirical quarter aggregate variances, divided by train mean variance per functional; macro average over contexts and regional/four-quadrant functionals",
+  "bootstrap": "1000 year-group draws seed 7201; resample the same years jointly across regions and quarters; conditional on fitted baselines. Descriptive resampling percentiles, not calibrated confidence limits: small-sample Wasserstein resampling can be upward biased.",
+  "limits": "Years are not guaranteed iid; only nine test years. These are historical retrospective reanalysis periods. No learned generator or operational forecast benefit is established.",
+  "summary": {
+    "validation": {
+      "identity": {
+        "normalized_aggregate_w1": 0.9310490805113251,
+        "year_bootstrap_95pct": [
+          0.9194446357494163,
+          0.9468106991132439
+        ],
+        "contexts": 12,
+        "year_groups": 5
+      },
+      "spatial_kernel": {
+        "normalized_aggregate_w1": 0.14530056030760718,
+        "year_bootstrap_95pct": [
+          0.13412871819178107,
+          0.15582358988581121
+        ],
+        "contexts": 12,
+        "year_groups": 5
+      },
+      "pooled_grid_mean": {
+        "normalized_aggregate_w1": 0.09912074385395388,
+        "year_bootstrap_95pct": [
+          0.09524758910314479,
+          0.10398393923756395
+        ],
+        "contexts": 12,
+        "year_groups": 5
+      },
+      "conditional_mean": {
+        "normalized_aggregate_w1": 0.07985199235314132,
+        "year_bootstrap_95pct": [
+          0.07295020770884555,
+          0.08842018472658221
+        ],
+        "contexts": 12,
+        "year_groups": 5
+      },
+      "conditional_replay": {
+        "normalized_aggregate_w1": 0.060634401447134806,
+        "year_bootstrap_95pct": [
+          0.060634401447134806,
+          0.0861846358026336
+        ],
+        "contexts": 12,
+        "year_groups": 5
+      }
+    },
+    "test": {
+      "identity": {
+        "normalized_aggregate_w1": 0.9076029634022578,
+        "year_bootstrap_95pct": [
+          0.8957785723794877,
+          0.9205775833984716
+        ],
+        "contexts": 12,
+        "year_groups": 9
+      },
+      "spatial_kernel": {
+        "normalized_aggregate_w1": 0.1433172567624396,
+        "year_bootstrap_95pct": [
+          0.1367614889319315,
+          0.14989240521418876
+        ],
+        "contexts": 12,
+        "year_groups": 9
+      },
+      "pooled_grid_mean": {
+        "normalized_aggregate_w1": 0.10297390132854,
+        "year_bootstrap_95pct": [
+          0.09567229181368364,
+          0.10978677086052746
+        ],
+        "contexts": 12,
+        "year_groups": 9
+      },
+      "conditional_mean": {
+        "normalized_aggregate_w1": 0.08237863882726972,
+        "year_bootstrap_95pct": [
+          0.0741069581284549,
+          0.08963095680225538
+        ],
+        "contexts": 12,
+        "year_groups": 9
+      },
+      "conditional_replay": {
+        "normalized_aggregate_w1": 0.04769161829629511,
+        "year_bootstrap_95pct": [
+          0.049854545770722104,
+          0.06744187593027816
+        ],
+        "contexts": 12,
+        "year_groups": 9
+      }
+    },
+    "spatial_transfer": {
+      "identity": {
+        "normalized_aggregate_w1": 1.039682911604969,
+        "year_bootstrap_95pct": [
+          1.023751235118262,
+          1.0568313892058094
+        ],
+        "contexts": 4,
+        "year_groups": 9
+      },
+      "spatial_kernel": {
+        "normalized_aggregate_w1": 0.2549773010335703,
+        "year_bootstrap_95pct": [
+          0.24126793613479325,
+          0.26928774388200977
+        ],
+        "contexts": 4,
+        "year_groups": 9
+      },
+      "pooled_grid_mean": {
+        "normalized_aggregate_w1": 0.1830567699267852,
+        "year_bootstrap_95pct": [
+          0.1686610752152124,
+          0.19593398595658945
+        ],
+        "contexts": 4,
+        "year_groups": 9
+      }
+    }
+  },
+  "dataset": {
+    "train": {
+      "matrices": 360,
+      "year_groups": 30,
+      "minimum_eigenvalue": 0.029448788863758596,
+      "source_sha256": "d90d06d0cae39fdb1b98511d6fc0f1dd2981dc11725d2f5233b7bb8390538fd7",
+      "first_date": "1981-01-01",
+      "last_date": "2010-12-31"
+    },
+    "validation": {
+      "matrices": 60,
+      "year_groups": 5,
+      "minimum_eigenvalue": 0.02944309720992357,
+      "source_sha256": "95f87e2463fc5b30cfc7bdab12c70f5c105ba6cdde19ea9b5dba87a12fcb5057",
+      "first_date": "2011-01-01",
+      "last_date": "2015-12-31"
+    },
+    "test": {
+      "matrices": 108,
+      "year_groups": 9,
+      "minimum_eigenvalue": 0.030016688825473002,
+      "source_sha256": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+      "first_date": "2016-01-01",
+      "last_date": "2024-12-31"
+    },
+    "spatial_transfer": {
+      "matrices": 36,
+      "year_groups": 9,
+      "minimum_eigenvalue": 0.028941810532284402,
+      "source_sha256": "3f07df5e9b45b7c0c18f3e11fc2a1740e89fe78d9cdbd979d292f8dd431f4167",
+      "first_date": "2016-01-01",
+      "last_date": "2024-12-31"
+    }
+  },
+  "source_sha256": {
+    "train": "d90d06d0cae39fdb1b98511d6fc0f1dd2981dc11725d2f5233b7bb8390538fd7",
+    "validation": "95f87e2463fc5b30cfc7bdab12c70f5c105ba6cdde19ea9b5dba87a12fcb5057",
+    "test": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+    "spatial_transfer": "3f07df5e9b45b7c0c18f3e11fc2a1740e89fe78d9cdbd979d292f8dd431f4167"
+  },
+  "report_sha256": "2ec5fd2cf2e9809de935c81170e1aff2b357fc202217ee704dd6aab9a138cead",
+  "selection_sha256": "1434c766f28f6a578dc352965076a4d431e304e99b866f64034cfcb18777ba77"
+}

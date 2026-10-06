@@ -1,0 +1,166 @@
+{
+  "scope": "Post-pilot controlled diagnostic on previously inspected test data",
+  "design": "Ten fixed permutation seeds 2027\u20132036, one common permutation per dataset draw; all results retained, no fitting or selection",
+  "interpretation": "Anonymous structural summaries cannot detect wrong named ROI/location assignments. Simultaneous node and attribute relabeling preserves the original task calculations.",
+  "brain": {
+    "real_only_auc": 0.7653968253968254,
+    "scrambled_auc_mean": 0.5510793650793651,
+    "scrambled_auc_range": [
+      0.4336507936507936,
+      0.6682539682539682
+    ],
+    "rows": [
+      {
+        "permutation_seed": 2027,
+        "max_standardized_structural_feature_error": 3.4734915995955e-13,
+        "auc_wrong_roi_labels": 0.5322222222222222,
+        "auc_canonicalized_labels": 0.7653968253968254
+      },
+      {
+        "permutation_seed": 2028,
+        "max_standardized_structural_feature_error": 1.7581871059680927e-13,
+        "auc_wrong_roi_labels": 0.5236507936507937,
+        "auc_canonicalized_labels": 0.7653968253968254
+      },
+      {
+        "permutation_seed": 2029,
+        "max_standardized_structural_feature_error": 1.7841282862246395e-13,
+        "auc_wrong_roi_labels": 0.5252380952380953,
+        "auc_canonicalized_labels": 0.7653968253968254
+      },
+      {
+        "permutation_seed": 2030,
+        "max_standardized_structural_feature_error": 2.5836773935262824e-13,
+        "auc_wrong_roi_labels": 0.5504761904761906,
+        "auc_canonicalized_labels": 0.7653968253968254
+      },
+      {
+        "permutation_seed": 2031,
+        "max_standardized_structural_feature_error": 1.4258468603277825e-13,
+        "auc_wrong_roi_labels": 0.5074603174603175,
+        "auc_canonicalized_labels": 0.7653968253968254
+      },
+      {
+        "permutation_seed": 2032,
+        "max_standardized_structural_feature_error": 1.811790371393949e-13,
+        "auc_wrong_roi_labels": 0.5541269841269841,
+        "auc_canonicalized_labels": 0.7653968253968254
+      },
+      {
+        "permutation_seed": 2033,
+        "max_standardized_structural_feature_error": 2.3156610663970003e-13,
+        "auc_wrong_roi_labels": 0.4336507936507936,
+        "auc_canonicalized_labels": 0.7653968253968254
+      },
+      {
+        "permutation_seed": 2034,
+        "max_standardized_structural_feature_error": 4.1060101316206066e-13,
+        "auc_wrong_roi_labels": 0.6682539682539682,
+        "auc_canonicalized_labels": 0.7653968253968254
+      },
+      {
+        "permutation_seed": 2035,
+        "max_standardized_structural_feature_error": 1.4151262072426113e-13,
+        "auc_wrong_roi_labels": 0.5976190476190476,
+        "auc_canonicalized_labels": 0.7653968253968254
+      },
+      {
+        "permutation_seed": 2036,
+        "max_standardized_structural_feature_error": 2.9803415576776205e-13,
+        "auc_wrong_roi_labels": 0.618095238095238,
+        "auc_canonicalized_labels": 0.7653968253968254
+      }
+    ]
+  },
+  "weather": {
+    "mean_relative_quadrant_variance_error": 0.29498769637800487,
+    "rows": [
+      {
+        "permutation_seed": 2027,
+        "max_standardized_structural_feature_error": 2.4068722029133027e-13,
+        "mean_relative_error_whole_region": 0.006522302060258013,
+        "mean_relative_error_quadrants": 0.3016494295968019,
+        "co_relabeling_max_variance_error": 2.886579864025407e-15
+      },
+      {
+        "permutation_seed": 2028,
+        "max_standardized_structural_feature_error": 2.823972215349983e-13,
+        "mean_relative_error_whole_region": 0.009841369290618844,
+        "mean_relative_error_quadrants": 0.27992890835735557,
+        "co_relabeling_max_variance_error": 4.218847493575595e-15
+      },
+      {
+        "permutation_seed": 2029,
+        "max_standardized_structural_feature_error": 2.598327946326861e-13,
+        "mean_relative_error_whole_region": 0.01015531860568659,
+        "mean_relative_error_quadrants": 0.28225121350353993,
+        "co_relabeling_max_variance_error": 2.6645352591003757e-15
+      },
+      {
+        "permutation_seed": 2030,
+        "max_standardized_structural_feature_error": 3.391501740468745e-13,
+        "mean_relative_error_whole_region": 0.008264445752380997,
+        "mean_relative_error_quadrants": 0.3085679859283253,
+        "co_relabeling_max_variance_error": 2.886579864025407e-15
+      },
+      {
+        "permutation_seed": 2031,
+        "max_standardized_structural_feature_error": 2.823972215349983e-13,
+        "mean_relative_error_whole_region": 0.011392211267679506,
+        "mean_relative_error_quadrants": 0.28747151567097123,
+        "co_relabeling_max_variance_error": 3.552713678800501e-15
+      },
+      {
+        "permutation_seed": 2032,
+        "max_standardized_structural_feature_error": 2.735082048765117e-13,
+        "mean_relative_error_whole_region": 0.007179524355794097,
+        "mean_relative_error_quadrants": 0.2888185354148551,
+        "co_relabeling_max_variance_error": 5.10702591327572e-15
+      },
+      {
+        "permutation_seed": 2033,
+        "max_standardized_structural_feature_error": 2.8809110204430945e-13,
+        "mean_relative_error_whole_region": 0.009902437977136337,
+        "mean_relative_error_quadrants": 0.2875546843248134,
+        "co_relabeling_max_variance_error": 4.218847493575595e-15
+      },
+      {
+        "permutation_seed": 2034,
+        "max_standardized_structural_feature_error": 2.434223023400954e-13,
+        "mean_relative_error_whole_region": 0.006011448915459909,
+        "mean_relative_error_quadrants": 0.30224227104458296,
+        "co_relabeling_max_variance_error": 3.3306690738754696e-15
+      },
+      {
+        "permutation_seed": 2035,
+        "max_standardized_structural_feature_error": 2.311097998820436e-13,
+        "mean_relative_error_whole_region": 0.007909708321762951,
+        "mean_relative_error_quadrants": 0.30614346298751965,
+        "co_relabeling_max_variance_error": 3.9968028886505635e-15
+      },
+      {
+        "permutation_seed": 2036,
+        "max_standardized_structural_feature_error": 2.413709908035216e-13,
+        "mean_relative_error_whole_region": 0.007166557948077657,
+        "mean_relative_error_quadrants": 0.3052489569512841,
+        "co_relabeling_max_variance_error": 2.9976021664879227e-15
+      }
+    ]
+  },
+  "source_sha256": {
+    "artifacts/abide_ho_20261005/train.npz": "e22f6dfcf4ba6bbf0f014adf12564903790534e02c76b9c7c51565a5f62b05b9",
+    "artifacts/abide_ho_20261005/test.npz": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+    "artifacts/weather_ncep_20261005/train.npz": "d90d06d0cae39fdb1b98511d6fc0f1dd2981dc11725d2f5233b7bb8390538fd7",
+    "artifacts/weather_ncep_20261005/test.npz": "5b36a6f933aad315517b9aecd7aebf595f2622bc0f088c99eea1af4bbce663bf",
+    "artifacts/abide_complete_utility_20261005/real_only.joblib": "7db24bfa5fe5787da2000c845b9910e5e12c61491dee4ebc237acefa6a8b5dc3",
+    "artifacts/abide_complete_utility_20261005/feature_scaler.joblib": "2ca362dc9319cbfb1b0e18eb8eada562dcf52db49d727cb653eec54eb7aa63c2",
+    "artifacts/abide_complete_utility_20261005/selection.json": "b1a6779a39d81c815b0158cfa7a1b81077f60ddcd334ea5a93aa0f34ced215c3"
+  },
+  "code_sha256": "ad63f10a4e1c760170c3cc9032573a159fa4ec61e3351fa4ad67f0ce40f0b60f",
+  "limitations": [
+    "Diagnostic corruptions, not samples from a trained generator.",
+    "One brain classifier and site; these are not generalization intervals.",
+    "Weather uses unit-scale OAS targets and fixed quadrant definitions.",
+    "Permutation-invariant scores remain appropriate for anonymous tasks."
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "python": "3.12.13 (main, Jul 23 2026, 14:41:27) [Clang 22.1.3 ]",
+  "executable": "@workspace/correlation-models/corrbench/artifacts/clean-env/bin/python",
+  "scope": "Independent isolated CPU environment reconstruction from the same 780 locally hashed source series; not an external-person replication",
+  "versions": {
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "corrbench": "0.1.0.dev0"
+  },
+  "splits": {
+    "train": {
+      "sha256": "e22f6dfcf4ba6bbf0f014adf12564903790534e02c76b9c7c51565a5f62b05b9",
+      "byte_identical": true
+    },
+    "validation": {
+      "sha256": "68801342b7c8e86b26baf2bc13da7823037c384d2d0068c034bb04fe300126ff",
+      "byte_identical": true
+    },
+    "test": {
+      "sha256": "0f8c1f4da0881ae5a9d69a15f4973a45b4ec9aabdd13c0718b68c31ae8344a47",
+      "byte_identical": true
+    }
+  },
+  "code_sha256": {
+    "corrbench.neuro": "295e05daefb2e5339a22d2efbf1eb859854f0ac9342ed7ab430921398db846e5",
+    "corrbench.cli.build_abide_dataset": "d2c2173d6df7f5110afade5ceb8b885c5117a0f9252e2b989b061c06d589f998"
+  },
+  "manifest_identical": true
+}

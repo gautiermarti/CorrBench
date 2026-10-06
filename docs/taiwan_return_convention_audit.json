@@ -1,0 +1,32 @@
+{
+  "scope": "Complete arithmetic/provenance audit of the frozen curated column",
+  "source_column": "daily_total_return",
+  "precise_description": "Returns relative to exchange reference prices, with a raw-close fallback and a 35% unresolved-return screen",
+  "panel_sha256": "d13a5fa92abe105d069eda1f6669111e84f13b40d637d4b78378a8dacaa43cfd",
+  "builder_sha256": "2159ad1bfb44c6504110519c4565d78c2273023d20a9b6722823776668c017ba",
+  "dataset_manifest_sha256": "4c1835dcd08c05e762a40fc9afe02bcfd287aec58ec8b4a7b91b9a830ff6d377",
+  "audit_code_sha256": "e33e4c92b4ab5b89bd2b7852182a76c313ccc591c1ed0ba07cb936a4a558e579",
+  "rows": 5534321,
+  "finite_returns": 5534161,
+  "reference_branch_rows": 5526284,
+  "finite_raw_close_fallback_rows": 7877,
+  "null_returns": 160,
+  "unresolved_over_35pct": 13,
+  "reference_vs_raw_difference_over_1bp": 47859,
+  "maximum_absolute_arithmetic_error": 0.0,
+  "data_modified": false,
+  "formulas": {
+    "reference_price": "close - exchange_reported_spread",
+    "reference_return": "spread / reference_price",
+    "raw_close_return": "close / previous_observed_close - 1",
+    "choice": "Use reference if reference_price>0 and abs(reference_return)<=.35; otherwise raw. If abs(chosen_return)>.35 or missing, save null."
+  },
+  "algebraic_example_not_an_observed_event": {
+    "previous_close": 100.0,
+    "cash_distribution": 10.0,
+    "close": 95.0,
+    "reference_return": 0.05555555555555558,
+    "cash_distribution_total_return": 0.050000000000000044
+  },
+  "limits": "The internal column name is preserved for byte-identical reproduction. It is not proof of an independently reconciled cash-dividend total-return series. A reference-price adjustment is not generally equal to (close+cash_distribution)/previous_close-1. No event-level adjustment, delisting-proceeds, upstream-download or legal-permission audit is established by this calculation."
+}

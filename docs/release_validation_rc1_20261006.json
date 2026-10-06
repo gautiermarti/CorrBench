@@ -1,0 +1,231 @@
+{
+  "scope": "Isolated CPU installed-wheel and source-archive tests; not remote CI or clean-machine CUDA retraining",
+  "python": "3.12.13",
+  "platform": "Linux-6.17.0-1029-nvidia-aarch64-with-glibc2.39",
+  "tests": {
+    "installed_wheels": 107,
+    "extracted_source_archives": 107
+  },
+  "source_archives_installed_before_second_test_pass": true,
+  "console_commands_checked": {
+    "corrbench": [
+      "corrbench-build",
+      "corrbench-build-abide",
+      "corrbench-build-jpx",
+      "corrbench-build-legacy",
+      "corrbench-build-multiscale",
+      "corrbench-build-weather",
+      "corrbench-cache-gft",
+      "corrbench-controls",
+      "corrbench-evaluate",
+      "corrbench-export-domain",
+      "corrbench-export-hf",
+      "corrbench-order",
+      "corrbench-summarize",
+      "corrbench-validate-leaderboard"
+    ],
+    "corrflow": [
+      "corrflow-benchmark-scaling",
+      "corrflow-evaluate",
+      "corrflow-sample",
+      "corrflow-sample-diffeocfm",
+      "corrflow-sample-image-ddpm",
+      "corrflow-train",
+      "corrflow-train-diffeocfm",
+      "corrflow-train-diffusion",
+      "corrflow-train-image-ddpm"
+    ],
+    "corrgan": [
+      "corrgan-sample",
+      "corrgan-sample-legacy",
+      "corrgan-sample-published-conditional",
+      "corrgan-sample-unconditional",
+      "corrgan-train",
+      "corrgan-train-unconditional"
+    ]
+  },
+  "dependencies": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "pandas": "3.0.6",
+    "pyarrow": "25.0.1",
+    "scikit-learn": "1.9.1",
+    "torch": "2.14.1+cpu",
+    "torchdiffeq": "0.2.5",
+    "netCDF4": "1.7.4",
+    "nibabel": "5.4.2",
+    "pytest": "9.1.1"
+  },
+  "packages": {
+    "corrbench": {
+      "version": "0.1.0rc1",
+      "installed_source_matches_checkout": true,
+      "source_sha256": {
+        "metrics.py": "840e4110b60558414d6cf31cdf71ad8afa275e47af3721c7fd9a848940654db6",
+        "datasets.py": "2870aaa1928c815551572afb7905938a612bf906d76044866a0826ebc633ffab",
+        "baselines.py": "081fd4b7d583e8a01835e56eece406cb56fc3cab5cb3a22f3cb7a3c67be30b4e",
+        "reference.py": "455b4b4fb28e9d5bf6f16dc5e02a818db838fe37d22dc909cde5f4d6fafe16fc",
+        "leaderboard.py": "6a59d6fab03a1ea6a72c1d230c463539469d5e97a8e4e269c9ebca83ab095d5f",
+        "jpx.py": "6de4e6720dd75f49376425ab1bffe3b819dbad28bdd9a6780d17b04791c7fbf4",
+        "domain_reference.py": "1155115f52c58d70efc298dcbc97cd7293b14d0be5b12c98ee93e0566de2e98f",
+        "__init__.py": "3d42991269727e5963743edfe790b35f4472694fb4e17808a6a1ea7de8ad47af",
+        "geometry.py": "605da094907b197c6cb4ffa23fc183c2ecadc762a07e9789168eb4889b63b965",
+        "ordering.py": "07c69fa07e9972d6502dfd93cc05443261835e68638463417280f5b4ae50c457",
+        "neuro.py": "295e05daefb2e5339a22d2efbf1eb859854f0ac9342ed7ab430921398db846e5",
+        "weather.py": "04fc70c90b9548970c7822f59977d9bab2da0836b95b57cd01e0f3e96c82f8ef",
+        "cli/compare_date_bootstrap.py": "dc959543533853524c51ee5416e6acc6546bffff33b3ef1af5d489b0fc0e15a9",
+        "cli/export_domain_reference.py": "cb87865a255143f7fa5a87cf9f9aa3074b40da1ac58e4ff8804f3b6474b86cce",
+        "cli/validate_leaderboard.py": "8a318c5d8d446729b1117f77798e690be728003c2b635153b9c9f0a594db5a72",
+        "cli/cache_gft.py": "e42acb390a5140a72111f74d193ec59488b36d8ed7a22bf053fd99cac164fb21",
+        "cli/summarize_seed_suite.py": "1906db7fde9ea6fca975f10df1667ae421f8624f2d8495f58f218c96e2ecc84b",
+        "cli/build_abide_dataset.py": "d2c2173d6df7f5110afade5ceb8b885c5117a0f9252e2b989b061c06d589f998",
+        "cli/evaluate_real_floor.py": "f4974df2a8758c54d49c0d2c23fb775ba1e66a88377cd42676207c0434b5b3f9",
+        "cli/analyze_matrix_conditioning.py": "b24c365978e7ffba50b7a52a5f6917d6e1a7decd61d5de767e2a6a995464a04f",
+        "cli/build_ordered_image_dataset.py": "9923a22da5c5fd50b6ba3cb531fc7159ad7921da00f06e34ad4856b4813e44c3",
+        "cli/summarize_control_suite.py": "974849b38215d5dff8cce16658dcc25dc41ddd2215bf50b14f3e66f9d8bde4ef",
+        "cli/build_jpx_panel.py": "806bf7be88218d7ef7551db02c4918cea5204579d7cb5d95a10edb1196cee200",
+        "cli/evaluate_matrix_samples.py": "b0efa628c00d1cdfcdecf099d21f60aebedc4fbcbecf42f4af0b08dfea547367",
+        "cli/build_weather_dataset.py": "89cfe94b46b985831118b260641b2327b66498c78638c95e5c17be2ffbead395",
+        "cli/evaluate_temporal_shift.py": "7424df92b8ec40db38d115cb647a6d8f16b464063961fb31ff63bd01ca31c5a1",
+        "cli/cache_normalized_cholesky.py": "98830bbc4c46c1a0d2afcc23db2509e7cdac961239b09f83fe7b078d15aaa9db",
+        "cli/summarize_repair_magnitudes.py": "024c6827a3b670f1929112518d27010e5afb210d6bbbf51e62632309151460fb",
+        "cli/build_multiscale_market_dataset.py": "3b36facccfec5c205799a382f9230ebb44217359d548098b79941f3c1d3ac6ab",
+        "cli/__init__.py": "5afa44490235eb7dc882ea453baec2e1b30f8a450f07f91e4ad4684565f748d2",
+        "cli/audit_jpx_dataset.py": "4c2e68ae3fca041040b751a8b2ff23189a76eeafb4265ddded70a65443922250",
+        "cli/build_market_dataset.py": "9b53b0a1b9113966c48b0513a4e1d42d3f709186188a8e205e92adafaab6f482",
+        "cli/export_reference.py": "4edeeda7b4cbdb058caa5639115476f3d7786cd1f71cdda43e52f939acd4c739",
+        "cli/evaluate_classifier_suite.py": "cf72171a719224b09dae0dd1061cb24745c58959b15c7c5ad5c6fa9cabecbdc9",
+        "cli/evaluate_statistical_baselines.py": "aa313206368052472637ca5deb489ef60facc28af745cebf4c0a8891654213f9",
+        "cli/build_corrgan_archive.py": "fc62dcb4b2dc065cda4779775f703534365bf92d44ec58fe0c703266bc7586b9"
+      },
+      "checkout_commit": "d697320f652782dc0eed18d745fd76b5c38f1d64",
+      "checkout_dirty": true,
+      "distributions": {
+        "corrbench-0.1.0rc1-py3-none-any.whl": "6a0b9e2805951fed3a73d90c16f8f083ca6776297cfa9e543764f41803e58636",
+        "corrbench-0.1.0rc1.tar.gz": "fa6894c9b438e907fe092da25cb64a09dd3b7da63b84d4f3cd0b9fa6ce94c35f"
+      }
+    },
+    "corrflow": {
+      "version": "0.1.0rc1",
+      "installed_source_matches_checkout": true,
+      "source_sha256": {
+        "diffeocfm.py": "32be71e612d6d6510126201fa1abe0b8e524b5b1872d51b296c6467f7e509293",
+        "diffusion.py": "3cd5917dee43074969dbc8ad9e0941ef4c41653cf063a4768040150bbdd8aac3",
+        "flow.py": "302ff62b9582375d50ca370330a82190036ec9b9aca7a58688f6da1b8c91aa32",
+        "__init__.py": "52b19a0d6767734a30d9250ddbc2323cef01e94092283e61efc3325d348449cc",
+        "sampling.py": "a595ab3f868fc2f8b86aa2d6bc2cef4209e71bfa6ab3eb03e8016967df21399b",
+        "cli/sample_flow.py": "72b352070c4895feb37154799ed04d4a4d53bfe43b29db4675277435a6582982",
+        "cli/sample_diffeocfm.py": "c1197de7c21086c8559545d7c872ec6ee64c4a357c253e994334e0d137faca40",
+        "cli/evaluate_projective_consistency.py": "c9015242e4e695ff1f5b7681a70850c61eb7d4d92daa513b606ba2cea1b06ba2",
+        "cli/benchmark_scaling.py": "878e8b9defde0e628458d10e7a1c9757b7315be9fbce5da1a070ffa7d0d53905",
+        "cli/train_neuro_flow.py": "89b2bbc7faaa87a97ced3c8955f290c7da01ff95fcca85d2afc5ae629fb95a86",
+        "cli/train_diffeocfm.py": "91418cda10b93f23443b1c00a23015a89594c87ff0430e15db726237e3e5bc86",
+        "cli/train_flow.py": "99150b6cd9cfb52c962683e5106a3324686f8736ec0241ac4ac301e5c69a90e1",
+        "cli/evaluate_equivariance.py": "3f22848176a1a45d96cfdc7e707fe2a05d556e0bb4e11cb02b3e76fd33de9997",
+        "cli/train_corrdiffusion.py": "2bed6ee68e5cb7c708c5f466922a3f17dc8e578d0450a37a2e6fc51e7ee0bebc",
+        "cli/__init__.py": "5afa44490235eb7dc882ea453baec2e1b30f8a450f07f91e4ad4684565f748d2",
+        "cli/sample_neuro_augmentation.py": "3debe6599501ccd04a7f290e3272f716f10daaf5ff6617a325f42e55dbe47eac",
+        "cli/evaluate_flow.py": "8d58bc3811837dd3b0acdfcb7d919f8d36a8db742104edb73cac5e55500d5459",
+        "cli/sample_ddpm.py": "30f0b6253c8384f72eeed417439bf3026700517764038d094b6a6be8269c411f",
+        "cli/train_ddpm.py": "e57737dcc0c3dc6bf23d524b5953501e15db1e5b96a73710ec8c19a51b882e4b",
+        "models/node_conditioned.py": "fc26d548f312f4e2a0c61b29ca25d219d0ac1e7d9f2f1b0438aa505a24b49fb2",
+        "models/__init__.py": "3b0b2d2e30263ca8604ab5e1ce5dbc4f1603a606eea74adf72923966258b2f70",
+        "models/equivariant.py": "67e65238dbd43692e7516d5be495ca0963c5bca201361ff6e80d99c0d01c23fb",
+        "models/mlp.py": "e0a9f690095f38d159aa1bf5761ca16a2256f1a4e2abead048aa35eb7ce16176",
+        "models/unet.py": "8b195835b88d7fa18adb63577059f890f56eae09e1468b93bc9b77b27c301f09"
+      },
+      "checkout_commit": "995eac702e05d4b75bbb7485b062cf8b53e1aada",
+      "checkout_dirty": true,
+      "distributions": {
+        "corrflow-0.1.0rc1.tar.gz": "4ee1d65f5d2aa2521890a263748aee6d8dcfc3630ea5daafd7c1b2f0734edba7",
+        "corrflow-0.1.0rc1-py3-none-any.whl": "48f3a4a4ffde432c5503abf6a58cbb10a46d5e0e0d77cf5c3a58650c61296e57"
+      }
+    },
+    "corrgan": {
+      "version": "0.1.0rc1",
+      "installed_source_matches_checkout": true,
+      "source_sha256": {
+        "validation.py": "e57bee2be6a7ae041c54fcec9fd43d6072532a35921837fe0420e9d1293f6dbe",
+        "legacy.py": "01f125cafa8e5250a340ef9deff183ebfdcba08fc744f5c2eb6e23304bb6b0e5",
+        "unconditional_training.py": "f227563ad789c73e9825aa9e8e3bba7aa13617915a2b8246f21d89e8716aacab",
+        "models.py": "3f237f3ab438fd5489c186b81b838482db2b10935cb1be2b293bd7a1e0298afc",
+        "__init__.py": "dead8a6e4b2d1689af2579a1d247c98920c5599aa6932854ab50ed7261358593",
+        "unconditional.py": "3f736ba49e30bd5f2ebfe05e3e16c995eb69bda5b78529f79a47cb0cb52c8624",
+        "cli/sample_published_ccorrgan.py": "2ade9995478858fac82222de414b4279462521bb502c7cf5a8509dd09581b99b",
+        "cli/sample_pretrained_corrgan.py": "528c23906e0a3e396aeacfb97f93043ab909bb9fd1641408a00c3d8590935a5e",
+        "cli/train_ccorrgan.py": "ab6ea766c565bc378656bb68901e36b6ccaf1b6ef7eebb8fd9a8ea3676bf9ec9",
+        "cli/train_unconditional.py": "9096304126f2475cf49f1ec9fd53a658eb49aba74b75629599c0907880b6d2f8",
+        "cli/sample_ccorrgan.py": "1ded3cb4b7e5aa6648d66bf962d63354b7f87fed361a7da0e5250c12e1475421",
+        "cli/__init__.py": "5afa44490235eb7dc882ea453baec2e1b30f8a450f07f91e4ad4684565f748d2",
+        "cli/sample_unconditional.py": "329dd00d5ef8615eef16bd320b2cc3d5bb9e92866ca97ba9b2d366df07dd2f6d"
+      },
+      "checkout_commit": "b0a8dbe9f4fe93508416fa59ffb9a8b361bb9113",
+      "checkout_dirty": true,
+      "distributions": {
+        "corrgan-0.1.0rc1.tar.gz": "813f9d3064547d66ab95fbcc72f42e233af2003ac83eb9b5a6f6a626097b9600",
+        "corrgan-0.1.0rc1-py3-none-any.whl": "6d454b832250172378661d9aa9616f4d3f3c27132b6de9066a13f3d72d28fc0b"
+      }
+    }
+  },
+  "readme_images_verified_in_source_archives": {
+    "corrbench": {
+      "docs/figures/domain_examples.png": "7a1229cbac4cb50b9846744120f28f7a648d69148f9e3ad30da059ba72dd544d"
+    },
+    "corrflow": {
+      "docs/figures/matched_taiwan.png": "5daad7085f9b8b7c0b2fe8e82505d229708517fffa20148f1cc8d28bacd55893"
+    },
+    "corrgan": {
+      "docs/figures/unconditional_validation.png": "70685e0b1bce5537b601dec50688efc1a8ff93859d1da1e21d4d80224c39d475"
+    }
+  },
+  "test_log_sha256": {
+    "build_corrbench.log": "2d707b6fa0b157c6ac1a608b76250321238dd2227b279e957320613c11c5bd29",
+    "build_corrflow.log": "93dee13fbde116808e20b730f04c1711d7eacd2355e6e65b462bbee710102bc4",
+    "build_corrgan.log": "45ede1c6e32ec5da226dc23c5133c993f8e292afd6fc2d81e694108bc5aa00d3",
+    "install.log": "365e1c52c4d3b504673152e26d3fef47ff2e1b638c650d1cb9c14f9763b37a27",
+    "dependencies.log": "34ecd6b39dd4198b58406050c3f72bd2f6eb9e7e4abd12d20d22db82ff53ac36",
+    "installed_wheels.log": "14955d92daa81d67cd1f514ce4aa509c11c5a43db063f27c24a84c659c885f4b",
+    "install_source_archives.log": "d99e811a52fa87e11f94d34915aadc564262e852b2582837fa9fdad7f9320473",
+    "source_dependencies.log": "7dc53ce8eae3621020efee72313e650dd4c86ff36490227f0f4b91e4199a0fda",
+    "extracted_source_archives.log": "5bb643268842c5307eb935d8ca310b5e73b75aebf8996875cb5949eaf0227c92",
+    "entrypoint_corrbench-build.log": "bc58f4064288fe4006a96968fe5d7918805a4b0fd7d76f472485e441f72c77c5",
+    "entrypoint_corrbench-build-abide.log": "25d139f5182a4cb1148fe0021af04a43ab5732f9858f68af72d2b4b22ab0f804",
+    "entrypoint_corrbench-build-jpx.log": "8e91f8b1a9996ee76bf1fcf96668df14ab7f6c7f06acfa8000023cffcc99951a",
+    "entrypoint_corrbench-build-legacy.log": "16142c4682abd95a560c07a488ef8f716e2436ef1d850d9aaad876293027cd8b",
+    "entrypoint_corrbench-build-multiscale.log": "de2a3e1d943d1cb334e4a560af83d4b84bde4be43cb15094856f4f934a634b05",
+    "entrypoint_corrbench-build-weather.log": "dad4b22a5ebed667ab92bc0d228dedacc0ac75045e91310560e9b377efc90fbc",
+    "entrypoint_corrbench-cache-gft.log": "a3ba8cc4851e98fc06b651f37a3150a6adc16d267ee48e7dd8f1217b0d9e2063",
+    "entrypoint_corrbench-controls.log": "e01e09ef9538ed2e1bd13ed8990c979c95c4384a2870337d7213b8782e667edf",
+    "entrypoint_corrbench-evaluate.log": "3b5de62945dbc517f409644a81f644d2bfdeeedc7289b6d78dd5e47eadbd193f",
+    "entrypoint_corrbench-export-domain.log": "ac771457b159a0ebd5694b6fa38656521b28638742ecfc68777e4aa73b64c885",
+    "entrypoint_corrbench-export-hf.log": "4993b6f77eb5e1316471c40b3447322fa50cb4ca69b7fd087e19048369fd130f",
+    "entrypoint_corrbench-order.log": "449142f678ad35185340a0884a07ac231b594b86bb5656ce9260914081fcd89b",
+    "entrypoint_corrbench-summarize.log": "12a49e2f0f19aef48f118e42af6995be193d3ea8692ffea8f3824c3f38337dba",
+    "entrypoint_corrbench-validate-leaderboard.log": "b96208b4bff4d457919681d68175f6b338ef4ee895c7cc388d808b4b7b19d679",
+    "entrypoint_corrflow-benchmark-scaling.log": "40f6c1807ee8018c746e8fa1ccc2a9b8f8e79c84514911d1a0f189b180ef3543",
+    "entrypoint_corrflow-evaluate.log": "9490626130c5326c8e2e367781f358823afb074d0053d88b9ada48107256c4fc",
+    "entrypoint_corrflow-sample.log": "1783af666be5f2288b196993364ba2d0fbc987f25ee3e5ea69958fac5b417a32",
+    "entrypoint_corrflow-sample-diffeocfm.log": "010b7f22d1b56425df89f2a72b9c05a04d2a9b13431e31c9a7067481c810e6e6",
+    "entrypoint_corrflow-sample-image-ddpm.log": "3367153ef8506d6ca73452c884aaff5ccdc7c8f7cef276f6b6befd5b475aa9b6",
+    "entrypoint_corrflow-train.log": "26d61a58cd74b7e649786d88b9ed7bfaccd3bdcee1bafad5dcf4ce0a44f6003a",
+    "entrypoint_corrflow-train-diffeocfm.log": "74b6d70b17fb03499a50231d9c43e8e24df14bfa03c53c3df3644f890c1ee2be",
+    "entrypoint_corrflow-train-diffusion.log": "9c3b811c372f13b0c54954a40541def0d5c560a4aa85fe15dbb71e335370ee80",
+    "entrypoint_corrflow-train-image-ddpm.log": "04ea1a6fb58ba03a28e79102b61a81ab729f71019c0545ef7c5a14f1d3ad3e24",
+    "entrypoint_corrgan-sample.log": "05414724400a5e9101b68d5e4a40c9da3cddf25332d50fd9f806e2e7edace469",
+    "entrypoint_corrgan-sample-legacy.log": "de24667604d4d300de93619d6858e03ff99800444467169d7f57265664cd890e",
+    "entrypoint_corrgan-sample-published-conditional.log": "61933f238d97f3ff39751357fed6609aadcb983c7294fdca5dd35f7860b23976",
+    "entrypoint_corrgan-sample-unconditional.log": "99b95f143b72a9f9be02a60e818651640cf2b33d28cc751a69acb30dc319d477",
+    "entrypoint_corrgan-train.log": "36b663c6b8b1125a65b52c8e6ef544b1303a58515885cf937eb9641087130fd5",
+    "entrypoint_corrgan-train-unconditional.log": "a0be17c2bd2f3f562c75bbc3c64371206921037361bd5c82a81f0baebc96f8c4",
+    "cli_weather.log": "728123f49c6c9e863d46b1a1b33460679fc1ae397c0b55db5c2c9ee05a09eea4",
+    "cli_domain_export.log": "b9708531c44150e48fffedddabf166a02a7b747c282c0cae7356265972cc689d",
+    "cli_leaderboard.log": "fb83a6afdbe0bed9f21a5cfc431ae4aab7fcaf2f6fedd92ffc7f08beb3460034",
+    "cli_unconditional_training.log": "2f6ac59f08442f78ab7ca1fe538e79742ed4d17d997aeae7650aa78b15a5ac33",
+    "cli_unconditional_sampling.log": "6487c20e75866aeccd9af4ce7bc404edabc6f6781e2a033ba1db4591789636ed",
+    "cli_diffeocfm.log": "c93f65f3d6365ef3e5ea71dc81e1c7a6f74f010bcd37d82e63593c2e2143d8b0",
+    "cli_node_training.log": "5c69db4988c3cfb610b80ec2c8656995ca6fc06c153565d1918272061e322621",
+    "cli_node_sampling.log": "c0fb2d3959d9016ce15c24374084d7284697138a16294aa0654447aed979a3e5",
+    "leaderboard_bundle.log": "34fca3cef12b2b2b38e7d117729b9853ca505d5a70c98ccb02496f7b12bae7f3"
+  },
+  "validation_code_sha256": "a5b7d0325a7c5fe90fc8cdfb6ba093a4a28efc72e844c6a348b795ab8b18a4f6"
+}

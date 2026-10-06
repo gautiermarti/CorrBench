@@ -1,0 +1,174 @@
+{
+  "source_panel_sha256": "d13a5fa92abe105d069eda1f6669111e84f13b40d637d4b78378a8dacaa43cfd",
+  "scope": "Source metadata/field crosswalk; publication date is not assumed to be a legal coverage start",
+  "venues": {
+    "TPEx": {
+      "rows": 2452704,
+      "sessions": 3302,
+      "first_date": "2013-01-02",
+      "last_date": "2026-07-30",
+      "portal_publication_date": "2015-12-03",
+      "rows_before_portal_publication": 463084,
+      "sessions_before_portal_publication": 714,
+      "cached_report_examples": [
+        {
+          "date": "2013-01-01",
+          "sha256": "0684d9b874c2699351f388e975a05938e8a77adf405b1010f8ce21ab5f51e96c",
+          "stock_table_fields": [
+            "Code",
+            "Name",
+            "Close",
+            "Change",
+            "Open",
+            "High",
+            "Low",
+            "Avg  Price",
+            "Trading Shares",
+            "Trans. Amount (NTD)",
+            "Trans.",
+            "Latest Bid Price",
+            "Latest Bid Volume (Thousands of Shares)",
+            "Latest Ask Price",
+            "Latest Ask Volume (Thousands of Shares)",
+            "Capitals (Shares)",
+            "Next Ref. Price",
+            "Next Limit Up",
+            "Next Limit Down"
+          ]
+        },
+        {
+          "date": "2026-07-30",
+          "sha256": "194b097643c5081f2c7460d90c16f073812f1c2997a78f2adfdfadc8ffbecd2d",
+          "stock_table_fields": [
+            "Code",
+            "Name",
+            "Close",
+            "Change",
+            "Open",
+            "High",
+            "Low",
+            "Avg  Price",
+            "Trading Shares",
+            "Trans. Amount (NTD)",
+            "Trans.",
+            "Latest Bid Price",
+            "Latest Bid Volume (Thousands of Shares)",
+            "Latest Ask Price",
+            "Latest Ask Volume (Thousands of Shares)",
+            "Capitals (Shares)",
+            "Next Ref. Price",
+            "Next Limit Up",
+            "Next Limit Down"
+          ]
+        }
+      ],
+      "first_trading_report": {
+        "date": "2013-01-02",
+        "sha256": "41c9cd80ec767307cb0b15e054b88814d8be70a8a5d291b48f4201ec3a7859af",
+        "stock_table_fields": [
+          "Code",
+          "Name",
+          "Close",
+          "Change",
+          "Open",
+          "High",
+          "Low",
+          "Avg Price",
+          "Trading Shares",
+          "Trans. Amount (NTD)",
+          "Trans.",
+          "Latest Bid Price",
+          "Latest Ask Price",
+          "Capitals (Shares)",
+          "Next Ref. Price",
+          "Next Limit Up",
+          "Next Limit Down"
+        ]
+      }
+    },
+    "TWSE": {
+      "rows": 3081617,
+      "sessions": 3302,
+      "first_date": "2013-01-02",
+      "last_date": "2026-07-30",
+      "portal_publication_date": "2017-05-23",
+      "rows_before_portal_publication": 911394,
+      "sessions_before_portal_publication": 1065,
+      "cached_report_examples": [
+        {
+          "date": "2013-01-01",
+          "sha256": "a5691b2512d7068ab2f69df75c3ef8fbc38dc565086422b1602656895c92c652",
+          "stock_table_fields": null
+        },
+        {
+          "date": "2026-07-30",
+          "sha256": "36d6b539744902f5f4d805e846f1ef7895cf65006ec222128221209c4596f279",
+          "stock_table_fields": [
+            "證券代號",
+            "證券名稱",
+            "成交股數",
+            "成交筆數",
+            "成交金額",
+            "開盤價",
+            "最高價",
+            "最低價",
+            "收盤價",
+            "漲跌(+/-)",
+            "漲跌價差",
+            "最後揭示買價",
+            "最後揭示買量",
+            "最後揭示賣價",
+            "最後揭示賣量",
+            "本益比"
+          ]
+        }
+      ],
+      "first_trading_report": {
+        "date": "2013-01-02",
+        "sha256": "bb0feed8c8d458b24c111f73159a53c3e6a5de897455633e9b6dd70c85c94b1f",
+        "stock_table_fields": [
+          "證券代號",
+          "證券名稱",
+          "成交股數",
+          "成交筆數",
+          "成交金額",
+          "開盤價",
+          "最高價",
+          "最低價",
+          "收盤價",
+          "漲跌(+/-)",
+          "漲跌價差",
+          "最後揭示買價",
+          "最後揭示買量",
+          "最後揭示賣價",
+          "最後揭示賣量",
+          "本益比"
+        ]
+      }
+    }
+  },
+  "source_panel_hash_reverified": true,
+  "source_endpoints": {
+    "TWSE": {
+      "url": "https://www.twse.com.tw/exchangeReport/MI_INDEX",
+      "method": "GET",
+      "params": {
+        "response": "json",
+        "date": "YYYYMMDD",
+        "type": "ALLBUT0999"
+      },
+      "open_data_listing": "https://data.gov.tw/en/datasets/11549"
+    },
+    "TPEx": {
+      "url": "https://www.tpex.org.tw/www/en-us/afterTrading/dailyQuotes",
+      "method": "POST",
+      "params": {
+        "date": "YYYY/MM/DD",
+        "response": "json"
+      },
+      "open_data_listing": "https://data.gov.tw/en/datasets/11370"
+    }
+  },
+  "rights_status": "pending",
+  "acquisition_script_sha256": "1db5e8f77bbde36a3aecb1e53e5291c6454906c4ecdeb6bc782b3eb544adf15e"
+}

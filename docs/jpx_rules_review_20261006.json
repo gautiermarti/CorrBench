@@ -1,0 +1,20 @@
+{
+  "url": "https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/rules",
+  "final_url": "https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/rules",
+  "status": 200,
+  "title": "JPX Tokyo Stock Exchange Prediction | Kaggle",
+  "characters": 31865,
+  "sha256": "cd8f42acd9d315b732eca6203d3e91e03cc608097008bd24f8ba0b4375a09839",
+  "date": "2026-10-06",
+  "rights_status": "restricted",
+  "separate_permission_established": false,
+  "source_archive_sha256": "aa144566f63e62a5af9ac5a7851e42ded46554fbfe650f851223b01920210c85",
+  "rules_sections": {
+    "7.A": "Data access/use limited to competition participation and Kaggle forums",
+    "7.B": "Competition data may not be provided to nonparticipants"
+  },
+  "derived_matrix_count": 8672,
+  "financial_data_uploaded": false,
+  "results_changed": false,
+  "contact_sent": false
+}

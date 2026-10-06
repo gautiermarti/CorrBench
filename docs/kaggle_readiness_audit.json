@@ -1,0 +1,114 @@
+{
+  "status": "local_synthetic_readiness_test_only",
+  "dimension": 80,
+  "train_cases": 300,
+  "evaluation_cases": 600,
+  "public_cases": 120,
+  "private_cases": 480,
+  "independent_test_groups": 200,
+  "all_group_members_share_usage": true,
+  "scores": {
+    "perfect_reference_organizer_check": {
+      "Public": 0.0,
+      "Private": 0.0
+    },
+    "conditional_replay": {
+      "Public": 0.06284606273496816,
+      "Private": 0.04032722335810333
+    },
+    "conditional_training_mean": {
+      "Public": 1.0220541602970397,
+      "Private": 1.024323876489431
+    },
+    "identity": {
+      "Public": 4.099380464929246,
+      "Private": 4.09832093720864
+    },
+    "wrong_condition_replay": {
+      "Public": 1.3008483900840988,
+      "Private": 1.2766735629796724
+    }
+  },
+  "seconds_per_score_call": {
+    "perfect_reference_organizer_check": {
+      "Public": 0.291920319898054,
+      "Private": 0.7313721689861268
+    },
+    "conditional_replay": {
+      "Public": 0.45807067095302045,
+      "Private": 0.8928684070706367
+    },
+    "conditional_training_mean": {
+      "Public": 0.1894706159364432,
+      "Private": 0.7745241809170693
+    },
+    "identity": {
+      "Public": 0.3540384329389781,
+      "Private": 0.8572718040086329
+    },
+    "wrong_condition_replay": {
+      "Public": 0.4830202090088278,
+      "Private": 0.9350757929496467
+    }
+  },
+  "peak_process_rss_mib": 413.8671875,
+  "environment": {
+    "python": "3.12.13",
+    "numpy": "2.5.3",
+    "pandas": "3.0.6",
+    "machine": "aarch64"
+  },
+  "checks": {
+    "csv_roundtrip_perfect_score_zero": true,
+    "id_order_invariance": true,
+    "within_condition_row_invariance": true,
+    "public_private_subsets": true,
+    "standalone_metric_parity": true
+  },
+  "limitations": [
+    "Synthetic systems test: these are not scientific model-comparison scores.",
+    "Twenty-one features do not determine the full matrix distribution.",
+    "Kaggle hosted scoring, data rights and protected holdout remain pending.",
+    "No actual held-out research matrix is distributed in this fixture.",
+    "Local runtime with concurrent GPU training; not Kaggle hardware."
+  ],
+  "source_hashes": {
+    "research/build_kaggle_fixture.py": "7a05045e4fed0b2f5514b97132dd94026906fcd4096428d5e8fe36caee97a76f",
+    "competition/metric.py": "909f254ae5b20c3ee051ff2a35a84808cb16382b198043c0c6df2ec83a6aa9ad",
+    "competition/starter_replay.py": "c8689117d9ef775100173097aa918fb594c1eb3e6d854520845dacf9a0709aa5"
+  },
+  "files": {
+    "organizer_only/group_ids.json": {
+      "sha256": "0d5334d926a940b576f8c471e2940ca3ee3b2fd0cbad8e8963db850139495679",
+      "bytes": 2671
+    },
+    "organizer_only/solution.csv": {
+      "sha256": "6a5e51f64654ba73a2454592bcc44d54b6589bc51514ded0d71739d4ae99a1e9",
+      "bytes": 36966192
+    },
+    "public/metric.ipynb": {
+      "sha256": "3e35c3ea989cce519fecdcd422d2666138802a38f6983d7e9bf91218604cff50",
+      "bytes": 9649
+    },
+    "public/metric.py": {
+      "sha256": "37ca141eeb16b87d20a2f28f3a9ce550e19d2d3b0ba565bbbcbbbd148c811067",
+      "bytes": 6969
+    },
+    "public/sample_submission.csv": {
+      "sha256": "fa701ce0c3d1302ab97c4416a52cb9b299beed3f77a961dadc47289c2e7505cd",
+      "bytes": 35840457
+    },
+    "public/starter.ipynb": {
+      "sha256": "f926ea76c3cc8b9a7ad6fea913b30ada045e3f82cbb3cb1e07ef4ef49a4e25c8",
+      "bytes": 2164
+    },
+    "public/test.csv": {
+      "sha256": "30195a6c192a5757ba711c09e223cc7fd20f05f53a9837d0fec2ca55b1f4b615",
+      "bytes": 8413
+    },
+    "public/train.csv": {
+      "sha256": "780e724d648f3fa85ccdc608feb774e56fa9fba1c5850169e44adfdb6582aa62",
+      "bytes": 18491181
+    }
+  }
+}

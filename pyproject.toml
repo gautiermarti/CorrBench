@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=77.0.3"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "corrbench"
+version = "0.1.0rc2"
+description = "Reproducible correlation-matrix datasets and common evaluation"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{name = "Gautier Marti"}]
+keywords = ["correlation-matrices", "generative-models", "reproducible-research"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["numpy>=2.0", "pandas>=2.2", "pyarrow", "pyyaml>=6.0", "scikit-learn>=1.7", "scipy>=1.14", "torch>=2.6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.11", "build"]
+weather = ["netCDF4>=1.7"]
+plots = ["matplotlib"]
+notebooks = ["nbformat", "nbclient", "ipykernel"]
+atlas = ["nibabel>=5.4"]
+
+[project.urls]
+Repository = "https://github.com/gautiermarti/corrbench"
+Issues = "https://github.com/gautiermarti/corrbench/issues"
+Documentation = "https://github.com/gautiermarti/corrbench#readme"
+Changelog = "https://github.com/gautiermarti/corrbench/blob/main/CHANGELOG.md"
+
+[project.scripts]
+corrbench-build = "corrbench.cli.build_market_dataset:main"
+corrbench-build-jpx = "corrbench.cli.build_jpx_panel:main"
+corrbench-build-legacy = "corrbench.cli.build_corrgan_archive:main"
+corrbench-build-multiscale = "corrbench.cli.build_multiscale_market_dataset:main"
+corrbench-order = "corrbench.cli.build_ordered_image_dataset:main"
+corrbench-cache-gft = "corrbench.cli.cache_gft:main"
+corrbench-evaluate = "corrbench.cli.evaluate_matrix_samples:main"
+corrbench-controls = "corrbench.cli.evaluate_statistical_baselines:main"
+corrbench-summarize = "corrbench.cli.summarize_seed_suite:main"
+corrbench-export-hf = "corrbench.cli.export_reference:main"
+corrbench-build-abide = "corrbench.cli.build_abide_dataset:main"
+corrbench-build-weather = "corrbench.cli.build_weather_dataset:main"
+corrbench-export-domain = "corrbench.cli.export_domain_reference:main"
+corrbench-validate-leaderboard = "corrbench.cli.validate_leaderboard:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]

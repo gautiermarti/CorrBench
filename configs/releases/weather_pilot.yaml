@@ -1,0 +1,16 @@
+config_name: weather_ncep_temperature_n64
+dataset_version: pilot-20261005
+domain: weather
+protocol_id: weather_pilot_protocol_20261005
+source_reference: https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html
+observation_definition: NCEP/NCAR Reanalysis 1 daily 2m temperature, 1981–2024; four fixed 8x8 patches, training-period annual-cycle subtraction, non-overlapping quarterly standardized-anomaly correlations and OAS regularization.
+builder_reference: corrbench.cli.build_weather_dataset; docs/weather_pilot_protocol.md
+split_description: Three regions train 1981–2010, validation 2011–2015, test 2016–2024. South America 2016–2024 is a separate transfer split, with explicitly allowed local 1981–2010 climatology calibration.
+matrix_space: real_correlation_pd
+rights_status: cleared
+license: other
+license_name: noaa-public-domain-attribution
+license_link: https://psl.noaa.gov/disclaimer/
+rights_evidence: NOAA PSL lists Usage Restrictions None for NCEP/NCAR Reanalysis 1; its public-domain policy requires attribution and no implied endorsement. These are CorrBench-derived matrices, not official NOAA products. Data provided by NOAA PSL, Boulder, Colorado, USA. Cite Kalnay et al., BAMS 77, 437–472 (1996), doi:10.1175/1520-0477(1996)077<0437:TNYRP>2.0.CO;2.
+independent_units: 564 region-quarter matrices are dependent views of 44 years. Split chronology has no shared observation dates. Resample years jointly across regions and quarters. The spatial transfer rows share test years and are not an extra independent temporal sample.
+limitations: Reanalysis assimilates observations into a model. Serial correlation limits independent daily information; OAS is a declared regularized target rather than optimal weather shrinkage. Includes land and water cells. Unit-variance dependence diagnostics do not forecast magnitudes, marginal tails, trajectories or energy production. These historical pilot periods are not a protected competition holdout.

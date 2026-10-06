@@ -1,0 +1,21 @@
+config_name: finance_japan_n80
+dataset_version: paper-v1-staging-20261005
+domain: finance
+protocol_id: japan_jpx-paper-reproduction-v1
+source_reference: JPX Tokyo Stock Exchange Prediction competition archive,
+  https://www.kaggle.com/competitions/jpx-tokyo-stock-exchange-prediction/data;
+  see docs/financial_release_review.md.
+observation_definition: Daily split-adjusted returns without cash dividends; 252 source
+  trading sessions per matrix.
+builder_reference: corrflow-research return reconstruction audit dated 2026-10-05;
+  exact builder and audit SHA-256 values accompany this metadata.
+split_description: Training 2018-2019; validation 2020; paper test 2021-2022-06-24.
+  These are frozen reproduction splits with overlapping windows and previously inspected
+  test periods, not a fresh competition holdout.
+matrix_space: real_correlation_pd
+rights_status: restricted
+rights_evidence: The official JPX competition rules retrieved 2026-10-06 state competition-only data access/use. Section 7.A limits use to competition participation and Kaggle forums; section 7.B prohibits redistribution to nonparticipants. Separate permission for CorrFlow's off-platform research/publication and derived-matrix release has not been established. Preserve results for author review; do not distribute data or claim an open research-data license. See docs/jpx_rules_review_20261006.md.
+builder_files_sha256:
+  scripts/build_market_dataset.py: 41ce83c0209dd4deadf91fab9271dddc0fc439db2d55556fe6c6c2171281842c
+  src/corrflow/datasets.py: 2870aaa1928c815551572afb7905938a612bf906d76044866a0826ebc633ffab
+  docs/raw_returns_reproduction_audit.json: 4863e64b6f352f93d82f4a1818f449e8155797e43d8f843082138ccea8c4de70

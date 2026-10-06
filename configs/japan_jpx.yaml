@@ -1,0 +1,31 @@
+market: japan_jpx_chronological
+source: data/processed/japan_jpx_panel/daily_prices.parquet
+columns:
+  date: date
+  asset: instrument_id
+  return: daily_split_adjusted_return
+  liquidity: median_value_traded_60d
+sampling:
+  matrix_dim: 80
+  lookback: 252
+  liquid_universe_size: 500
+  annualization: 252
+  stress_threshold: -0.5
+  rally_threshold: 2.0
+regime_quantiles: [0.2, 0.8]
+splits:
+  train:
+    start: 2018-01-01
+    end: 2019-12-31
+    samples_per_date: 8
+    seed: 42001
+  validation:
+    start: 2020-01-01
+    end: 2020-12-31
+    samples_per_date: 8
+    seed: 42002
+  test:
+    start: 2021-01-01
+    end: 2022-06-24
+    samples_per_date: 8
+    seed: 42003

@@ -1,0 +1,12 @@
+{
+  "browser": "153.0.8010.12",
+  "protocols_checked": 7,
+  "records_checked": 36,
+  "evidence_links_checked": true,
+  "download_verified": true,
+  "mobile_widths_without_overflow": [
+    390,
+    320
+  ],
+  "page_errors": []
+}

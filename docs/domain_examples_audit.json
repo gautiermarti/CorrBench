@@ -1,0 +1,34 @@
+{
+  "scope": "Illustration, not a distributional or utility result",
+  "selection": "First stored training row in each frozen dataset",
+  "panels": {
+    "Finance": {
+      "source_sha256": "a266c9449f2297d7d777313607e5748a20066554d5dd1e27462a7bae8ef48d65",
+      "row": 0,
+      "dimension": 80,
+      "minimum_eigenvalue": 0.12603415839114418,
+      "node_order": "unchanged"
+    },
+    "Brain connectivity": {
+      "source_sha256": "e22f6dfcf4ba6bbf0f014adf12564903790534e02c76b9c7c51565a5f62b05b9",
+      "row": 0,
+      "dimension": 111,
+      "minimum_eigenvalue": 0.045642081914699394,
+      "node_order": "unchanged"
+    },
+    "Spatial weather": {
+      "source_sha256": "d90d06d0cae39fdb1b98511d6fc0f1dd2981dc11725d2f5233b7bb8390538fd7",
+      "row": 0,
+      "dimension": 64,
+      "minimum_eigenvalue": 0.03340509815506343,
+      "node_order": "unchanged"
+    }
+  },
+  "plot_code_sha256": "1672ae0e0d5516f77cf56ef1a4eeec3cae1169bab127b9eaa82ac9d02c06c7d4",
+  "files": {
+    "domain_examples.png": "7a1229cbac4cb50b9846744120f28f7a648d69148f9e3ad30da059ba72dd544d",
+    "domain_examples.svg": "c5479616529d7bae2936de20a0bd6f13c9d83a057ef660b1bad2b288aa616ed2",
+    "domain_examples.pdf": "c285ff49251bd3e6d777e284107d81cd01c1a1107f8964aaa403f1cea0a46341"
+  },
+  "publicly_distributed": false
+}

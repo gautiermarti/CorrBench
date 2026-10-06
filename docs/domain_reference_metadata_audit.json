@@ -1,0 +1,54 @@
+{
+  "scope": "Metadata refresh only; every Parquet file remains byte-identical to the completely round-tripped reference",
+  "configurations": {
+    "brain_abide_ho_n111": {
+      "manifest_sha256": "427f6197eb83085715d6cf2ef0ac73bc02810e87adac422b770b40b202ba8b10",
+      "card_sha256": "238f086102b2c0b95eeb3646a44103eea53aa742cb3fe28f968a4f862d3d80da",
+      "distribution_blocked": true,
+      "splits": {
+        "train": {
+          "parquet_sha256": "d84028264d3d0f8775dbf84f649202c61cfdb2199c670450e0697266a6ad33c2",
+          "unchanged_from_full_array_audit": true,
+          "rows": 349
+        },
+        "validation": {
+          "parquet_sha256": "a8e495c9baa1f12b5cb5a5e0e977f16efff368de490a01b31176732be21c3e26",
+          "unchanged_from_full_array_audit": true,
+          "rows": 92
+        },
+        "test": {
+          "parquet_sha256": "e2a99f043f41c760e197395d3a709678cdacea3c93652e2aced4e56b7cd6b164",
+          "unchanged_from_full_array_audit": true,
+          "rows": 160
+        }
+      }
+    },
+    "weather_ncep_temperature_n64": {
+      "manifest_sha256": "3ee8b246b293498086ea13a6c4a6a17dc96a42d38d05734357ebcbe6ccc3877b",
+      "card_sha256": "73c1a89f670700b3f21dec7d7e17c16d41a1be7fe515be42313a3dd8bb877ddd",
+      "distribution_blocked": false,
+      "splits": {
+        "train": {
+          "parquet_sha256": "7687a3e3017a932a56f35c8b555fa5ca43d39822d74bd080fdbe873f8bf65e71",
+          "unchanged_from_full_array_audit": true,
+          "rows": 360
+        },
+        "validation": {
+          "parquet_sha256": "2551e160a18fff8754888517b4ee9fd98dc7369d4c10ded8beee2951e95cfdad",
+          "unchanged_from_full_array_audit": true,
+          "rows": 60
+        },
+        "test": {
+          "parquet_sha256": "0f000a8b89f702863028e51fe067a34774b7e6d45b46d570d3141c4dabefe3e5",
+          "unchanged_from_full_array_audit": true,
+          "rows": 108
+        },
+        "spatial_transfer": {
+          "parquet_sha256": "c7b013d6050551060a2b0f08664fc3a1d08f5144e12beb1f5fbd35e39546f8db",
+          "unchanged_from_full_array_audit": true,
+          "rows": 36
+        }
+      }
+    }
+  }
+}

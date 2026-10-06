@@ -1,0 +1,72 @@
+{
+  "datasets_version": "5.0.1",
+  "offline": true,
+  "configs": {
+    "brain_abide_ho_n111": {
+      "manifest_sha256": "8ab2de91ca7c6f59e8765bd460a10be1e1c1dc4b90abf3cf7badd68a394e6631",
+      "splits": {
+        "test": {
+          "rows": 160,
+          "full_record_indices_checked": [
+            0,
+            80,
+            159
+          ]
+        },
+        "train": {
+          "rows": 349,
+          "full_record_indices_checked": [
+            0,
+            174,
+            348
+          ]
+        },
+        "validation": {
+          "rows": 92,
+          "full_record_indices_checked": [
+            0,
+            46,
+            91
+          ]
+        }
+      }
+    },
+    "weather_ncep_temperature_n64": {
+      "manifest_sha256": "5010e6bd3871923e87d561c006d019d12db6c1de40bc2a1126028182605a68b1",
+      "splits": {
+        "spatial_transfer": {
+          "rows": 36,
+          "full_record_indices_checked": [
+            0,
+            18,
+            35
+          ]
+        },
+        "test": {
+          "rows": 108,
+          "full_record_indices_checked": [
+            0,
+            54,
+            107
+          ]
+        },
+        "train": {
+          "rows": 360,
+          "full_record_indices_checked": [
+            0,
+            180,
+            359
+          ]
+        },
+        "validation": {
+          "rows": 60,
+          "full_record_indices_checked": [
+            0,
+            30,
+            59
+          ]
+        }
+      }
+    }
+  }
+}

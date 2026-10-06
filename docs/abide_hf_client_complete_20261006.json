@@ -1,0 +1,59 @@
+{
+  "scope": "Independent HF client local loading, not hosted delivery",
+  "datasets_version": "5.0.1",
+  "configurations": {
+    "brain_abide_ho_n111": {
+      "test": {
+        "rows": 160,
+        "arrays_checked": 14,
+        "all_values_exact": true
+      },
+      "train": {
+        "rows": 349,
+        "arrays_checked": 14,
+        "all_values_exact": true
+      },
+      "validation": {
+        "rows": 92,
+        "arrays_checked": 14,
+        "all_values_exact": true
+      }
+    },
+    "brain_abide_ho_n110_same601": {
+      "test": {
+        "rows": 160,
+        "arrays_checked": 14,
+        "all_values_exact": true
+      },
+      "train": {
+        "rows": 349,
+        "arrays_checked": 14,
+        "all_values_exact": true
+      },
+      "validation": {
+        "rows": 92,
+        "arrays_checked": 14,
+        "all_values_exact": true
+      }
+    },
+    "brain_abide_ho_n110_expanded762": {
+      "test": {
+        "rows": 166,
+        "arrays_checked": 14,
+        "all_values_exact": true
+      },
+      "train": {
+        "rows": 488,
+        "arrays_checked": 14,
+        "all_values_exact": true
+      },
+      "validation": {
+        "rows": 108,
+        "arrays_checked": 14,
+        "all_values_exact": true
+      }
+    }
+  },
+  "release_audit_sha256": "99442dad80a3db69ade453edd6a25fe5f267aa2e5a1a90e9d9a61e68ccf1c991",
+  "publicly_published": false
+}

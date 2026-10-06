@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "protocols": 7,
+  "records": 36,
+  "scope": "Bundle integrity and protocol comparability; no external scientific verification inferred",
+  "results_sha256": "c78ed0b4a301c43d7cc7e228bfc40bd8c9c21af395ffbb23aa21439168394231"
+}

@@ -1,0 +1,108 @@
+{
+  "scope": "Local three-configuration packaging; no Hub upload",
+  "corrbench_version": "0.1.0rc1",
+  "publicly_published": false,
+  "distribution_blocked": true,
+  "configurations": {
+    "brain_abide_ho_n111": {
+      "cohort": "original111",
+      "matrix_dim": 111,
+      "manifest_sha256": "5ffdf76dfa83dacd1a175439b5ffe925028971d2bf3cfded7036b0907d52646d",
+      "distribution_blocked": true,
+      "splits": {
+        "train": {
+          "rows": 349,
+          "every_array_and_dtype_exact": true,
+          "parquet_sha256": "d84028264d3d0f8775dbf84f649202c61cfdb2199c670450e0697266a6ad33c2"
+        },
+        "validation": {
+          "rows": 92,
+          "every_array_and_dtype_exact": true,
+          "parquet_sha256": "a8e495c9baa1f12b5cb5a5e0e977f16efff368de490a01b31176732be21c3e26"
+        },
+        "test": {
+          "rows": 160,
+          "every_array_and_dtype_exact": true,
+          "parquet_sha256": "e2a99f043f41c760e197395d3a709678cdacea3c93652e2aced4e56b7cd6b164"
+        }
+      }
+    },
+    "brain_abide_ho_n110_same601": {
+      "cohort": "same601",
+      "matrix_dim": 110,
+      "manifest_sha256": "0a799f9e1e726f04c7fcec799dc2cb69ea1ffa103a536724de06123efbbcbae6",
+      "distribution_blocked": true,
+      "splits": {
+        "train": {
+          "rows": 349,
+          "every_array_and_dtype_exact": true,
+          "parquet_sha256": "73b1a8e32ae8149ec1230518cdbeb421fd65971b96879e9ab8a017a3237f14c4"
+        },
+        "validation": {
+          "rows": 92,
+          "every_array_and_dtype_exact": true,
+          "parquet_sha256": "beca2fdfc50de1b9d942bc25888bc3ddd7942b26f471ee8d63b3c0d4855f66a5"
+        },
+        "test": {
+          "rows": 160,
+          "every_array_and_dtype_exact": true,
+          "parquet_sha256": "ad90cd42084451959dcbf68de386e6a970cfe7ca7491342c426472669fa7fd43"
+        }
+      }
+    },
+    "brain_abide_ho_n110_expanded762": {
+      "cohort": "expanded762",
+      "matrix_dim": 110,
+      "manifest_sha256": "dd8bfed81189faa609463727dce3b6e67437a2aac43e56b0cc703498a144378a",
+      "distribution_blocked": true,
+      "splits": {
+        "train": {
+          "rows": 488,
+          "every_array_and_dtype_exact": true,
+          "parquet_sha256": "4edd34bd03302b76ca9e76989b1cbcf6992d6c0995bedc259328529ea2a125f3"
+        },
+        "validation": {
+          "rows": 108,
+          "every_array_and_dtype_exact": true,
+          "parquet_sha256": "27db50ecc7fd89fe786d44875e3e2e1019d5aa2ed194f745d6eed795959f1243"
+        },
+        "test": {
+          "rows": 166,
+          "every_array_and_dtype_exact": true,
+          "parquet_sha256": "b1abe6bad301ba08ce23246816d6221aabab856422b1734d4b2268c72c9da127"
+        }
+      }
+    }
+  },
+  "files": {
+    "README.md": "8c7b8dc0fb1f46a22b7e37a155297fc8262ae61de4ba2e5ecaa22cbd2e4ca2bd",
+    "brain_abide_ho_n110_expanded762/README.md": "241825a7dbcaae99b354039d67573459b2111245629acddc48d406228a5aa835",
+    "brain_abide_ho_n110_expanded762/data/test.parquet": "b1abe6bad301ba08ce23246816d6221aabab856422b1734d4b2268c72c9da127",
+    "brain_abide_ho_n110_expanded762/data/train.parquet": "4edd34bd03302b76ca9e76989b1cbcf6992d6c0995bedc259328529ea2a125f3",
+    "brain_abide_ho_n110_expanded762/data/validation.parquet": "27db50ecc7fd89fe786d44875e3e2e1019d5aa2ed194f745d6eed795959f1243",
+    "brain_abide_ho_n110_expanded762/manifest.json": "dd8bfed81189faa609463727dce3b6e67437a2aac43e56b0cc703498a144378a",
+    "brain_abide_ho_n110_expanded762/manifest.sha256": "41b14213a9d0c1fae4b953b3a8fc91c284d1a8ce9740ed595b338068d3052192",
+    "brain_abide_ho_n110_same601/README.md": "ed02939a09618e888fe041d08d81cf5bb858e6eb52942486a7113e6bd2ade471",
+    "brain_abide_ho_n110_same601/data/test.parquet": "ad90cd42084451959dcbf68de386e6a970cfe7ca7491342c426472669fa7fd43",
+    "brain_abide_ho_n110_same601/data/train.parquet": "73b1a8e32ae8149ec1230518cdbeb421fd65971b96879e9ab8a017a3237f14c4",
+    "brain_abide_ho_n110_same601/data/validation.parquet": "beca2fdfc50de1b9d942bc25888bc3ddd7942b26f471ee8d63b3c0d4855f66a5",
+    "brain_abide_ho_n110_same601/manifest.json": "0a799f9e1e726f04c7fcec799dc2cb69ea1ffa103a536724de06123efbbcbae6",
+    "brain_abide_ho_n110_same601/manifest.sha256": "47892525c83d5cc5c20290422df44f9a8bf0e03a8226279ddc0b0520946a1254",
+    "brain_abide_ho_n111/README.md": "108ca2206a6630ce395931c0a6afbe522b8b5f849c3ba8430fdd393c84f118dd",
+    "brain_abide_ho_n111/data/test.parquet": "e2a99f043f41c760e197395d3a709678cdacea3c93652e2aced4e56b7cd6b164",
+    "brain_abide_ho_n111/data/train.parquet": "d84028264d3d0f8775dbf84f649202c61cfdb2199c670450e0697266a6ad33c2",
+    "brain_abide_ho_n111/data/validation.parquet": "a8e495c9baa1f12b5cb5a5e0e977f16efff368de490a01b31176732be21c3e26",
+    "brain_abide_ho_n111/manifest.json": "5ffdf76dfa83dacd1a175439b5ffe925028971d2bf3cfded7036b0907d52646d",
+    "brain_abide_ho_n111/manifest.sha256": "e1ab4a735f3cb979cc30e83b3242ed8b38f2b3b2e2a080963c80fb5f158b37d1",
+    "docs/abide_atlas_audit_20261006.json": "3f65c52124cd0653cf654dbba1bf604369460c1cebd7af68129bcb4fc58267dd",
+    "docs/abide_atlas_audit_20261006.md": "4abd419d2581df241b4a66d282cf5f03e202aa62da437e39d192f675c9170ec2",
+    "docs/abide_attribution_20261006.json": "dd50581c859b483e0d43913e6bdb1e802403e83ff4d80c8f68997dbd001d5bf3",
+    "docs/abide_attribution_20261006.md": "9ed1a6159a0afbd4f4ada7310ba3bd25e530a32401b5eea013972a55e39cc209",
+    "docs/abide_named110_execution_20261006.md": "a97788bba8c934d278d45e4dcdd6c49b76593d6d2d01e193cd8d81d83dfadc7b",
+    "docs/abide_named110_protocol_20261006.md": "1743c7d4409cbfb150bedc9b9abc1f49660202f19b9d8b6f15f55706a9fd6f17",
+    "docs/abide_named110_results_20261006.json": "7d70502badf614814197d8516c8443c6256a4ee525ab0c4471cd3e66f008d24d",
+    "docs/abide_named110_results_20261006.md": "3279900b5761f3a56dce5535a7d48a813c3abe7ee7e519d950d9ea920620a047",
+    "docs/abide_release_review.md": "bbcbd0ed363e1854989941c005fbaec95513e48ce6fe66a17830859f6528bf04",
+    "docs/fmri_pilot_protocol.md": "ad3c09ab8ca3290aca8875fba055e3a792de7f20b8744892013e0c2dff659b98"
+  }
+}

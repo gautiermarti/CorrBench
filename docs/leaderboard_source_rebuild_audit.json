@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "scope": "Default builder runs from source documentation and UI without experiment artifacts; output bytes all match",
+  "protocols": 7,
+  "records": 36,
+  "results_sha256": "c78ed0b4a301c43d7cc7e228bfc40bd8c9c21af395ffbb23aa21439168394231",
+  "builder_sha256": "17a7abda59368903a72b04c54d149bd4274b75bb34ac1b822d41ca9b63aeaf2e"
+}
